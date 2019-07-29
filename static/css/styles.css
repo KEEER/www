@@ -1,0 +1,95 @@
+/* make body clear */
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  --mdc-theme-primary: #002d4d;
+  background-color: #002d4d;
+}
+
+/* container */
+.container {
+  padding: 8px;
+  display: flex;
+}
+
+.container.header {
+  height: 400px;
+}
+
+.container.header > * {
+  display: flex;
+  flex-direction: column;
+}
+
+.container.header > *::before, .container.header > *::after {
+  content: ' ';
+  flex: auto;
+}
+
+.container.light {
+  color: #002d4d;
+  --mdc-theme-primary: #002d4d;
+  background-color: #fff;
+}
+
+.container.dark {
+  color: #f5fafd;
+  --mdc-theme-primary: #f5fafd;
+  background-color: #002d4d;
+}
+
+@media (min-width: 656px) {
+  .container > * {
+    width: 640px;
+  }
+  .container::before, .container::after {
+    content: ' ';
+    flex: auto;
+    height: 100%;
+  }
+}
+
+/* helpers */
+.align-center {
+  text-align: center;
+}
+
+.title-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* logo */
+.logo-large, .logo-large > svg {
+  width: 400px;
+}
+
+.logo-appbar, .logo-appbar > svg {
+  height: 32px;
+}
+
+/* login panel */
+#login-panel {
+  position: fixed;
+  top: 14px;
+  right: 8px;
+  --mdc-theme-primary: #f5fafd;
+  z-index: 5;
+}
+
+/* top app bar */
+#appbar.hidden {
+  opacity: 0;
+}
+
+#appbar {
+  transition: opacity ease-out 0.2s;
+  will-change: opacity;
+}
+
+/* index */
+.container.index.header > * {
+  align-items: center;
+}

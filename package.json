@@ -1,0 +1,25 @@
+{
+  "name": "www",
+  "version": "0.0.4",
+  "description": "keeer.net V4",
+  "scripts": {
+    "build": "node scripts/build && cp -r static/* dist",
+    "dev": "node scripts/dev",
+    "clean": "rm -rf dist",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KEEER/www.git"
+  },
+  "author": "KEEER",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/KEEER/www/issues"
+  },
+  "homepage": "https://github.com/KEEER/www#readme",
+  "dependencies": {
+    "ejs": "^2.6.2",
+    "mkdirp": "^0.5.1"
+  }
+}
