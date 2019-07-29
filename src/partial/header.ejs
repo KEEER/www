@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#002d4d" />
   <% if(typeof index !== 'undefined' && index) { %>
   <title>客页 | KEEER</title>
   <% } else { %>
@@ -17,7 +19,7 @@
 </head>
 <body class="mdc-typography">
   <span id="login-panel"><a class="mdc-button" href="/login">登录</a> <a class="mdc-button mdc-button--outlined" href="/signup">注册</a></span>
-  <header class="mdc-top-app-bar hidden" id="appbar">
+  <header class="mdc-top-app-bar mdc-top-app-bar--fixed hidden" id="appbar">
     <div class="mdc-top-app-bar__row">
       <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start container">
         <span class="mdc-top-app-bar__title"><div class="logo-appbar"><%- include('/img/logo/light-large.svg') %></div></span>

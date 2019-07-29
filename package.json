@@ -6,7 +6,7 @@
     "build": "npm run clean && node scripts/build && cp -r static/* dist",
     "dev": "node scripts/dev",
     "clean": "rm -rf dist",
-    "prepublish": "npm run build"
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",

@@ -7,15 +7,17 @@
     var hidden = true
     window.addEventListener('scroll', function() {
       var rect = header.getBoundingClientRect()
-      if(hidden && rect.top + rect.height < 0) {
+      if(hidden && rect.top + rect.height - 64 < 0) {
         appbar.classList.remove('hidden')
         hidden = false
       }
-      if(!hidden && rect.top + rect.height > 0) {
+      if(!hidden && rect.top + rect.height - 64 > 0) {
         appbar.classList.add('hidden')
         hidden = true
       }
     })
+  } else {
+    appbar.classList.remove('hidden')
   }
 
   var ripples = [].concat(Array.from($$('[data-ripple]')), Array.from($$('.mdc-button')))

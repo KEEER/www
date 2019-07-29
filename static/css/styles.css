@@ -15,6 +15,7 @@ body {
 
 .container > * {
   width: 100%;
+  max-width: 750px;
 }
 
 .container::before, .container::after {
@@ -49,12 +50,6 @@ body {
   background-color: #002d4d;
 }
 
-@media (min-width: 672px) {
-  .container > * {
-    width: 640px;
-  }
-}
-
 /* helpers */
 .align-center {
   text-align: center;
@@ -79,6 +74,23 @@ body {
 
 .logo-appbar, .logo-appbar > svg {
   height: 32px;
+}
+
+/* GitHub mark */
+.octicon-mark-github > path {
+  fill: #fff;
+}
+
+.icon.link {
+  text-decoration: none;
+  opacity: 0.5;
+  padding: 0 3px;
+  transition: opacity 0.2s ease-out;
+  will-change: opacity;
+}
+
+.icon.link:hover, .icon.link:focus {
+  opacity: 0.9;
 }
 
 /* login panel */
@@ -119,16 +131,16 @@ body {
 }
 
 #products-gallery > .mdc-card {
-  margin: 4px 0;
+  margin: 6px 0;
 }
 
-@media(min-width: 672px) {
+@media(min-width: 794px) {
   #products-gallery {
     justify-content: space-between;
   }
 
   #products-gallery > .mdc-card {
-    width: 316px;
+    width: 368px;
   }
 }
 
