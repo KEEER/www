@@ -9,8 +9,18 @@ body {
 
 /* container */
 .container {
-  padding: 8px;
+  padding: 16px;
   display: flex;
+}
+
+.container > * {
+  width: 100%;
+}
+
+.container::before, .container::after {
+  content: ' ';
+  flex: auto;
+  height: 100%;
 }
 
 .container.header {
@@ -39,14 +49,9 @@ body {
   background-color: #002d4d;
 }
 
-@media (min-width: 656px) {
+@media (min-width: 672px) {
   .container > * {
     width: 640px;
-  }
-  .container::before, .container::after {
-    content: ' ';
-    flex: auto;
-    height: 100%;
   }
 }
 
@@ -66,6 +71,12 @@ body {
   width: 400px;
 }
 
+@media (max-width: 672px) {
+  .logo-large, .logo-large > svg {
+    width: 280px;
+  }
+}
+
 .logo-appbar, .logo-appbar > svg {
   height: 32px;
 }
@@ -74,9 +85,16 @@ body {
 #login-panel {
   position: fixed;
   top: 14px;
-  right: 8px;
+  right: 14px;
   --mdc-theme-primary: #f5fafd;
   z-index: 5;
+}
+
+@media(max-width: 599px) {
+  #login-panel {
+    top: 10px;
+    right: 10px;
+  }
 }
 
 /* top app bar */
@@ -92,4 +110,63 @@ body {
 /* index */
 .container.index.header > * {
   align-items: center;
+}
+
+#products-gallery {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#products-gallery > .mdc-card {
+  margin: 4px 0;
+}
+
+@media(min-width: 672px) {
+  #products-gallery {
+    justify-content: space-between;
+  }
+
+  #products-gallery > .mdc-card {
+    width: 316px;
+  }
+}
+
+.mdc-card__primary {
+  padding: 1rem;
+}
+
+.mdc-card > .mdc-card__primary-action {
+  display: flex;
+  flex-direction: row;
+}
+
+.people .mdc-card__media:first-child {
+  border-radius: 4px;
+}
+
+.mdc-card__title, .mdc-card__subtitle {
+  margin: 0;
+}
+
+.mdc-card__secondary, .mdc-card__subtitle {
+  color: rgba(0, 0, 0, .54);
+  color: var(--mdc-theme-text-secondary-on-background, rgba(0, 0, 0, .54));
+}
+
+.mdc-card__secondary {
+  padding: 1rem;
+}
+
+.mdc-card__media-content {
+  display: flex;
+  align-items: flex-end;
+}
+
+.mdc-card__media-content .mdc-card__subtitle, .mdc-card__media-content .mdc-card__title {
+  color: #f5fafd;
+}
+
+.mdc-card__media.mdc-card__media--square {
+  width:110px;
 }

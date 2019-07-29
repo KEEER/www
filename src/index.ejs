@@ -6,8 +6,37 @@
   </div>
 </div>
 
+<div class="container light align-center">
+  <div class="mdc-typography--body1">
+    <h2 class="mdc-typography--headline5">Where Developers Meet</h2>
+    <p>KEEER是Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+</div>
+
 <div class="container light">
-  <div class="mdc-typography--body1" id="about">
+  <div class="mdc-typography--body1">
+    <div class="title-button">
+      <h1 class="mdc-typography--headline4">产品</h1>
+      <a href="/products/" class="mdc-button mdc-button--unelevated">查看全部</a>
+    </div>
+    <div id="products-gallery">
+      <% for(let i of [0, 1, 2, 3]) { %>
+      <%- include('/partial/product-card', {
+        heroUrl: 'https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg',
+        name: 'KEEER Vote',
+        slogan: 'Collect your data, by your way.',
+        introduction: 'KEEER Vote 是一个多功能的数据收集平台。Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        productLink: '/products/vote/',
+        useLink: 'https://vote-lab.keeer.net:20443/',
+      }) %>
+      <% } %>
+    </div>
+  </div>
+</div>
+
+<div class="container dark">
+  <div class="mdc-typography--body1">
+    <h1 class="mdc-typography--headline4">关于我们</h1>
     <p>KEEER初创于2015年，由成员Queue Huo和前成员Tiger Fan共同创立。在Edgaru089, Alan Liang和Sunny Peng三名成员加入，队伍逐渐成型。那时的我们本着要开发游戏的初心，创建了客页工作室。遗憾的是：这段时间，KEEER共开发游戏《Traps n' Roads》（Queue设计Egamad开发）一款。</p>
     <p>2018年里，Tiger, Edgaru089, Sunny因故离开KEEER；同年，Rickole Xi, Egamad Yan, Indogent Chan, Linda Lee, Tom Wu, Kevin Jin的陆续加入使得KEEER拥有了前所未有的开发能力与技术水平。这使得KEEER的目标不再局限于游戏，而是提供优秀的软件服务。此外，成员Alan一直持续近三年对团队的不懈学习与付出，为KEEER的接下来的发展奠定了十分重要的基础。</p>
     <p>2018年9月至今，KEEER共开发了游戏《256》（Alan设计并开发）、《Buildhome》（Queue设计并开发）两款；服务"自动评教"、"歌舞嘉年华官方网站"、"人大附中高考加油头像生成"、"人大附中社联在线管理系统"（均由Alan提出并完成开发）。</p>
@@ -21,24 +50,16 @@
 <div class="container light">
   <div class="mdc-typography--body1">
     <div class="title-button">
-      <h1 class="mdc-typography--headline4">产品</h1>
-      <a href="/products/" class="mdc-button mdc-button--unelevated">查看全部</a>
-    </div>
-  </div>
-</div>
-
-<div class="container dark">
-  <div class="mdc-typography--body1">
-    <h1 class="mdc-typography--headline4">关于我们</h1>
-  </div>
-</div>
-
-<div class="container light">
-  <div class="mdc-typography--body1">
-    <div class="title-button">
       <h1 class="mdc-typography--headline4">认识我们的团队</h1>
       <button class="mdc-button mdc-button--unelevated">换一个</button>
     </div>
+    <%- include('/partial/people-card', {
+      imageUrl: 'https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg',
+      name: '张思睿',
+      position: '吉祥物',
+      introduction: 'KEEER的吉祥物一只',
+      url: '/people/zhangsan/',
+    }) %>    
   </div>
 </div>
 
