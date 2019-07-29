@@ -62,16 +62,6 @@ body {
 }
 
 /* logo */
-.logo-large, .logo-large > svg {
-  width: 400px;
-}
-
-@media (max-width: 672px) {
-  .logo-large, .logo-large > svg {
-    width: 280px;
-  }
-}
-
 .logo-appbar, .logo-appbar > svg {
   height: 32px;
 }
@@ -120,10 +110,6 @@ body {
 }
 
 /* index */
-.container.index.header > * {
-  align-items: center;
-}
-
 #products-gallery {
   display: flex;
   justify-content: space-around;
@@ -141,6 +127,18 @@ body {
 
   #products-gallery > .mdc-card {
     width: 368px;
+  }
+
+  .mdc-typography--headline2 {
+    font-weight: 200;
+  }
+}
+
+@media(max-width: 794px) {
+  .mdc-typography--headline2 {
+    font-size: 2.125rem;
+    line-height: 2.5rem;
+    margin-bottom: 0;
   }
 }
 

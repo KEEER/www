@@ -3,7 +3,7 @@
   var $$ = function(sel) {return document.querySelectorAll(sel)}
   var appbar = $('#appbar')
   var header = $('.container.header')
-  if(header) {
+  if(header && !header.classList.contains('nohide')) {
     var hidden = true
     window.addEventListener('scroll', function() {
       var rect = header.getBoundingClientRect()
