@@ -100,16 +100,27 @@ body {
 }
 
 /* top app bar */
-#appbar.hidden {
-  opacity: 0;
+#appbar {
+  transition: top cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+  will-change: top, background-color;
+  top: 0;
 }
 
-#appbar {
-  transition: opacity ease-out 0.2s;
-  will-change: opacity;
+#appbar.hidden {
+  top: -64px;
+}
+
+#appbar.opaque {
+  background-color: rgba(0, 45, 77, 0);
 }
 
 /* index */
+.container.header.index {
+  background-image: url(/img/rain.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
 #products-gallery {
   display: flex;
   justify-content: space-around;
@@ -131,6 +142,7 @@ body {
 
   .mdc-typography--headline2 {
     font-weight: 200;
+    margin-bottom: 16px;
   }
 }
 

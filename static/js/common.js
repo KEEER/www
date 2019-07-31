@@ -3,19 +3,27 @@
   var $$ = function(sel) {return document.querySelectorAll(sel)}
   var appbar = $('#appbar')
   var header = $('.container.header')
-  if(header && !header.classList.contains('nohide')) {
+  if(header) {
     var hidden = true
-    window.addEventListener('scroll', function() {
+    var nohide = header.classList.contains('nohide')
+    var clazz = nohide ? 'opaque' : 'hidden'
+    var onscroll = function() {
       var rect = header.getBoundingClientRect()
       if(hidden && rect.top + rect.height - 64 < 0) {
-        appbar.classList.remove('hidden')
+        appbar.classList.remove(clazz)
         hidden = false
       }
       if(!hidden && rect.top + rect.height - 64 > 0) {
-        appbar.classList.add('hidden')
+        appbar.classList.add(clazz)
         hidden = true
       }
-    })
+    }
+    window.addEventListener('scroll', onscroll)
+    setTimeout(onscroll, 1)
+    if(nohide) {
+      appbar.classList.remove('hidden')
+      appbar.classList.add('opaque')
+    }
   } else {
     appbar.classList.remove('hidden')
   }
