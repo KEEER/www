@@ -1,0 +1,18 @@
+[
+    {
+        "heroUrl": "https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg",
+        "name": "KEEER Vote",
+        "slogan": "Collect your data your way.",
+        "introduction": "KEEER Vote 是一个多功能的数据收集平台，它允许您轻松制作并发布问卷。敬请期待！",
+        "productLink": "/products/vote",
+        "useLink": "https://vote-lab.keeer.net:20443/"
+    },
+    {
+        "heroUrl": "https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg",
+        "name": "KEEER Time Manager",
+        "slogan": "No bother, it can actually manage your time.",
+        "introduction": "KEEER Time Manager 是一个可以真正为你规划时间的软件。敬请期待！",
+        "productLink": "/products/ktm",
+        "useLink": " "
+    }
+]
