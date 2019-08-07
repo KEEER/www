@@ -1,7 +1,8 @@
-function swapInPlaceWithoutMemo(list, iA, iB){
-    list[iB] = list[iA] + (list[iA] = list[iB]) - list[iB];
-    return list;
-  }
+function swap(arr, index1, index2) {
+    arr[index1] = arr.splice(index2, 1, arr[index1])[0];
+    return arr;
+}
+
 
 ;(function() {
     var $ = function(sel) {return document.querySelector(sel)}
@@ -9,25 +10,23 @@ function swapInPlaceWithoutMemo(list, iA, iB){
     switchButton = $('#switchPerson')
     peopleList = $$('[people]')
     for (var i = 0; i < peopleList.length; i++) {
-        var x = Math.trunc(Math.random() * (peopleList.length));
-        peopleList[i].hidden = true;
-        [peopleList[i], peopleList[x]] = [peopleList[x], peopleList[i]];    
+        peopleList[i].style.display = "none";   
     }
-    console.log(peopleList[0].innerText);
-    peopleList[0].hidden = false;
+    var x = Math.floor(Math.random()*(peopleList.length));
+    var displayPerson = peopleList[x];
+
+    displayPerson.style.display = "inline";    
 
     switchButton.onclick = function buttonOnclick(){
-        peopleList[0].hidden = true;
+
+        displayPerson.style.display = "none";
+
         var x = Math.floor(Math.random()*(peopleList.length));
-        
-        peopleList = swapInPlaceWithoutMemo(peopleList, 0, x);
 
-        for(let i of peopleList){
-         console.log(i.innerText+'****==****');
-        }
+        displayPerson = peopleList[x];
 
-        peopleList[0].hidden = false;
-        console.log(peopleList[0].innerText);
+        displayPerson.style.display = "inline";
+
     }
     
   })()
