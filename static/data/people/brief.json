@@ -1,0 +1,23 @@
+[
+  {
+    "avatarUrl": "https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg",
+    "name": "张思睿",
+    "position": "吉祥物",
+    "introduction": "KEEER的吉祥物一只",
+    "url": "/people/zhangsan"
+  },
+  {
+    "avatarUrl": "https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg",
+    "name": "陈驭祺",
+    "position": "实习学员",
+    "introduction": "orz dmy",
+    "url": "/people/indogent"
+  },
+  {
+    "avatarUrl": "https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg",
+    "name": "霍岱宣",
+    "position": "开发者",
+    "introduction": "KEEER骚话最多的开发者",
+    "url": "/people/queue"
+  }
+]
