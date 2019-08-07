@@ -45,16 +45,19 @@
   <div class="mdc-typography--body1">
     <div class="title-button">
       <h1 class="mdc-typography--headline4">认识我们的团队</h1>
-      <button class="mdc-button mdc-button--unelevated">换一个</button>
+      <button class="mdc-button mdc-button--unelevated" id="switchPerson">换一个</button>
     </div>
+    <% for(let person of JSON.parse(brief)) { %>
     <%- include('/partial/people-card', {
-      avatarUrl: 'https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg',
-      name: '张思睿',
-      position: '吉祥物',
-      introduction: 'KEEER的吉祥物一只',
-      url: '/people/zhangsan/',
+      avatarUrl: person.avatarUrl,
+      name: person.name,
+      position: person.position,
+      introduction: person.introduction,
+      url: person.url
     }) %>    
+    <% } %>
   </div>
+  <script src="/js/switch.js"></script>
 </div>
 
 <%- include('/partial/footer')%>
