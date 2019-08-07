@@ -14,14 +14,14 @@
       <a href="/products/" class="mdc-button mdc-button--unelevated">查看全部</a>
     </div>
     <div id="products-gallery">
-      <% for(let i of [0, 1, 2, 3]) { %>
+      <% for(let product of JSON.parse(productBrief)) { %>
       <%- include('/partial/product-card', {
-        heroUrl: 'https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg',
-        name: 'KEEER Vote',
-        slogan: 'Collect your data, by your way.',
-        introduction: 'KEEER Vote 是一个多功能的数据收集平台。Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        productLink: '/products/vote/',
-        useLink: 'https://vote-lab.keeer.net:20443/',
+        heroUrl: product.heroUrl,
+        name: product.name,
+        slogan: product.slogan,
+        introduction: product.introduction,
+        productLink: product.productLink,
+        useLink: product.useLink,
       }) %>
       <% } %>
     </div>
@@ -47,7 +47,7 @@
       <h1 class="mdc-typography--headline4">认识我们的团队</h1>
       <button class="mdc-button mdc-button--unelevated" id="switchPerson">换一个</button>
     </div>
-    <% for(let person of JSON.parse(brief)) { %>
+    <% for(let person of JSON.parse(peopleBrief)) { %>
     <%- include('/partial/people-card', {
       avatarUrl: person.avatarUrl,
       name: person.name,
