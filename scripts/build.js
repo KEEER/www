@@ -24,13 +24,13 @@ for (let file of filelist) {
 
 async function render(filename) {
   const newname = filename.replace('src', 'dist').replace(/.ejs$/, '.html')
-  const res = await ejs.renderFile(filename, 
+  const res = await ejs.renderFile(filename,
     {
       peopleBrief: fs.readFileSync(path.resolve(__dirname, '../data/people/brief.json')),
-      productBrief: fs.readFileSync(path.resolve(__dirname, '../data/products/brief.json'))
-    }, 
+      productBrief: fs.readFileSync(path.resolve(__dirname, '../data/products/brief.json')),
+    },
     {root: path.resolve(__dirname, '../src/')}
   )
-  mkdirp.sync(newname.replace(/(\/|\\)[^\/\\]*$/, ''))
+  mkdirp.sync(newname.replace(/(\/|\\)[^/\\]*$/, ''))
   fs.writeFileSync(newname, res)
 }

@@ -21,16 +21,15 @@ const server = http.createServer(async (req, resp) => {
       path.resolve(__dirname, `../src/${pathname}.ejs`),
       {
         peopleBrief: fs.readFileSync(path.resolve(__dirname, '../data/people/brief.json')),
-        productBrief: fs.readFileSync(path.resolve(__dirname, '../data/products/brief.json'))
+        productBrief: fs.readFileSync(path.resolve(__dirname, '../data/products/brief.json')),
       },
       {root: path.resolve(__dirname, '../src/')}
     )
   } catch(e) {
-    html = '<textarea>Error: '+e.stack+'</textarea>'
+    html = '<textarea>Error: ' + e.stack + '</textarea>'
   } finally {
     resp.writeHead(200, {'Content-Type': 'text/html,charset=utf8'})
     resp.end(html)
-    return
   }
 })
 
