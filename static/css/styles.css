@@ -192,3 +192,10 @@ body {
 .mdc-card__media.mdc-card__media--square {
   width:110px;
 }
+
+/* person */
+.container.header.person {
+  background-image: url(/img/code.jpg);
+  background-position: center;
+  background-size: cover;
+}
