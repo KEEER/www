@@ -20,8 +20,8 @@ const server = http.createServer(async (req, resp) => {
     html = await ejs.renderFile(
       path.resolve(__dirname, `../src/${pathname}.ejs`),
       {
-        peopleBrief: fs.readFileSync(path.resolve(__dirname, '../static/data/people/brief.json')),
-        productBrief: fs.readFileSync(path.resolve(__dirname, '../static/data/products/brief.json'))
+        peopleBrief: fs.readFileSync(path.resolve(__dirname, '../data/people/brief.json')),
+        productBrief: fs.readFileSync(path.resolve(__dirname, '../data/products/brief.json'))
       },
       {root: path.resolve(__dirname, '../src/')}
     )
