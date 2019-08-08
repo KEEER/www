@@ -1,7 +1,7 @@
 const ejs = require('ejs')
 const fs = require('fs')
 const path = require('path')
-const mkdirp = require('mkdirp')
+const {mkdirpSync, copySync} = require('fs-extra')
 
 const base = path.resolve(__dirname, '../src')
 const dirlist = [base]
@@ -31,6 +31,9 @@ async function render(filename) {
     },
     {root: path.resolve(__dirname, '../src/')}
   )
-  mkdirp.sync(newname.replace(/(\/|\\)[^/\\]*$/, ''))
+  mkdirpSync(newname.replace(/(\/|\\)[^/\\]*$/, ''))
   fs.writeFileSync(newname, res)
 }
+
+mkdirpSync(path.resolve(__dirname, '../dist'))
+copySync(path.resolve(__dirname, '../static'), path.resolve(__dirname, '../dist/'))
