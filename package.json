@@ -3,7 +3,8 @@
   "version": "0.0.4",
   "description": "keeer.net V4",
   "scripts": {
-    "build": "npm run clean && node scripts/build && cp -r static/* dist",
+    "build": "node scripts/build && cp -r static/* dist",
+    "rebuild": "npm run clean && npm run build",
     "dev": "node scripts/dev",
     "clean": "rm -rf dist",
     "prepare": "npm run build",
