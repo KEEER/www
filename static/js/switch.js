@@ -1,10 +1,8 @@
-function swap(arr, index1, index2) {
-    arr[index1] = arr.splice(index2, 1, arr[index1])[0];
-    return arr;
-}
-
-
 ;(function() {
+    function swap(arr, index1, index2) {
+        arr[index1] = arr.splice(index2, 1, arr[index1])[0];
+        return arr;
+    }
     var $ = function(sel) {return document.querySelector(sel)}
     var $$ = function(sel) {return document.querySelectorAll(sel)}
     switchButton = $('#switchPerson')
@@ -15,7 +13,7 @@ function swap(arr, index1, index2) {
     var x = Math.floor(Math.random()*(peopleList.length));
     var displayPerson = peopleList[x];
 
-    displayPerson.style.display = "inline";    
+    displayPerson.style.display = "block";    
 
     switchButton.onclick = function buttonOnclick(){
 
@@ -25,7 +23,7 @@ function swap(arr, index1, index2) {
 
         displayPerson = peopleList[x];
 
-        displayPerson.style.display = "inline";
+        displayPerson.style.display = "block";
 
     }
     
