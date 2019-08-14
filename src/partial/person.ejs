@@ -1,9 +1,16 @@
 <%- include('/partial/header', {title: `${name}`}) %>
-<div class="container dark header person align-center">
-    <div>
-      <h1 class="mdc-typography--headline2"><%= name %></h1>
-      <h3 class="mdc-typography mdc-typography--subtitle2"><%= speciality %></h3>
-      <div class="mdc-typography mdc-typography--body2"><%= motto %></div>
+<div class="container dark header person">
+  <div class="mdc-typography--body1">
+    <div class="person-info">
+      <div style="width: 168px">
+        <img src="/img/avatar/<%= id %>.jpg">
+        </div>
+      <div>
+        <h1 class="mdc-typography--headline2" style="margin-top: 0px"><%= name %></h1>
+        <h3 class="mdc-typography mdc-typography--subtitle2"><%= speciality %></h3>
+        <div class="mdc-typography mdc-typography--body2"><%= motto %></div>
+        </div>
+      </div>
     </div>
   </div>
   

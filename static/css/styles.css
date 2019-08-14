@@ -199,3 +199,8 @@ body {
   background-position: center;
   background-size: cover;
 }
+
+.person-info {
+  display: flex;
+  align-items: center;
+}
