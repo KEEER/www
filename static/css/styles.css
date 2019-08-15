@@ -64,6 +64,8 @@ body {
 /* logo */
 .logo-appbar, .logo-appbar > svg {
   height: 32px;
+  text-decoration: none;
+  display: block;
 }
 
 /* GitHub mark */
@@ -195,12 +197,58 @@ body {
 
 /* person */
 .container.header.person {
-  background-image: url(/img/code.jpg);
   background-position: center;
   background-size: cover;
+}
+
+.container.header.person > *::after {
+  flex: 0;
 }
 
 .person-info {
   display: flex;
   align-items: center;
+}
+
+.avatar-wrapper, .avatar-wrapper > * {
+  width: 148px;
+  height: 148px;
+}
+
+.avatar-wrapper > * {
+  border-radius: 50%;
+  border: 2px solid #f5fafd;
+}
+
+.person-basics {
+  flex: auto;
+  margin-left: 16px;
+}
+
+.person-name {
+  margin-top: 14px;
+}
+
+.person-speciality {
+  color: #abafb1;
+}
+
+.avatar-wrapper {
+  margin: 16px 16px 16px 0;
+}
+
+@media(max-width: 794px) {
+  .person-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .avatar-wrapper, .avatar-wrapper > * {
+    width: 128px;
+    height: 128px;
+  }
+
+  .avatar-wrapper {
+    margin-left: 16px;
+  }
 }

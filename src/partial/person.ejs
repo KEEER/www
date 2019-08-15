@@ -1,25 +1,25 @@
-<%- include('/partial/header', {title: `${name}`}) %>
-<div class="container dark header person">
-  <div class="mdc-typography--body1">
+<%- include('/partial/header', {title: `${name} - 成员`}) %>
+<div class="container dark header person" style="background-image: url(&quot;<%- headerImageUrl %>&quot;);">
+  <div>
     <div class="person-info">
-      <div style="width: 168px">
-        <img src="/img/avatar/<%= id %>.jpg">
-        </div>
-      <div>
-        <h1 class="mdc-typography--headline2" style="margin-top: 0px"><%= name %></h1>
-        <h3 class="mdc-typography mdc-typography--subtitle2"><%= speciality %></h3>
-        <div class="mdc-typography mdc-typography--body2"><%= motto %></div>
-        </div>
+      <div class="avatar-wrapper">
+        <img src="/img/avatar/<%= id %>.jpg" class="avatar">
+      </div>
+      <div class="person-basics">
+        <h1 class="mdc-typography mdc-typography--headline2 person-name"><%= name %></h1>
+        <h3 class="mdc-typography mdc-typography--subtitle2 person-speciality"><%= speciality %></h3>
+        <p class="mdc-typography mdc-typography--body2 person-motto"><%= motto %></p>
       </div>
     </div>
   </div>
-  
-  <div class="container light">
-    <div class="mdc-typography--body1">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
+</div>
+
+<div class="container light">
+  <div class="mdc-typography--body1">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
   </div>
+</div>
 <%- include('/partial/footer')%>
