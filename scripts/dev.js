@@ -14,6 +14,7 @@ const server = http.createServer(async (req, resp) => {
     resp.writeHead(200)
     resp.end(file)
     return
+  // eslint-disable-next-line no-empty
   } catch(e) {}
   let html
   try {

@@ -12,6 +12,7 @@ for(let dir of dirlist) {
     try {
       let list = fs.readdirSync(dir).map(name => path.resolve(dir, name))
       dirlist.push(...list)
+    // eslint-disable-next-line no-empty
     } catch(e) {}
   } else {
     filelist.push(path.resolve(__dirname, '../src', dir))
