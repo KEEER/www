@@ -8,14 +8,14 @@ ejs.rmWhitespace = true
 
 const server = http.createServer(async (req, resp) => {
   let pathname = url.parse(req.url).pathname
-  if(pathname === '/') pathname = '/index'
+  if (pathname === '/') pathname = '/index'
   try {
     let file = fs.readFileSync(path.resolve(__dirname, '../static/', pathname.substr(1)))
     resp.writeHead(200)
     resp.end(file)
     return
   // eslint-disable-next-line no-empty
-  } catch(e) {}
+  } catch (e) {}
   let html
   try {
     html = await ejs.renderFile(
@@ -24,12 +24,12 @@ const server = http.createServer(async (req, resp) => {
         peopleBrief: fs.readFileSync(path.resolve(__dirname, '../data/people/brief.json')),
         productBrief: fs.readFileSync(path.resolve(__dirname, '../data/products/brief.json')),
       },
-      {root: path.resolve(__dirname, '../src/')}
+      { root: path.resolve(__dirname, '../src/') },
     )
-  } catch(e) {
+  } catch (e) {
     html = '<textarea>Error: ' + e.stack + '</textarea>'
   } finally {
-    resp.writeHead(200, {'Content-Type': 'text/html,charset=utf8'})
+    resp.writeHead(200, { 'Content-Type': 'text/html,charset=utf8' })
     resp.end(html)
   }
 })
