@@ -47,6 +47,8 @@ body {
 .container.dark {
   color: #f5fafd;
   --mdc-theme-primary: #f5fafd;
+  --mdc-theme-text-primary-on-background: rgba(245, 250, 253, 0.87);
+  --mdc-theme-text-secondary-on-background: rgba(245, 250, 253, 0.54);
   background-color: #002d4d;
 }
 
@@ -251,4 +253,9 @@ body {
   .avatar-wrapper {
     margin-left: 16px;
   }
+}
+
+.products__product-icon, .mdc-list--avatar-list .products__product-icon.mdc-list-item__graphic {
+  width: 50px;
+  height: 50px;
 }

@@ -1,0 +1,15 @@
+<ul class="mdc-list mdc-list--two-line mdc-list--avatar-list">
+  <% for (let product of productIndex[group]) {
+    const link = /^https?:\/\//.test(product.link) ?
+      product.link :
+      `/products/${encodeURIComponent(group)}/${encodeURIComponent(product.link)}`
+  %>
+  <a role="listitem" class="mdc-list-item" data-ripple href="<%- link %>">
+    <span class="mdc-list-item__graphic products__product-icon" aria-hidden="true"><img src="<%- product.icon %>" /></span>
+    <span class="mdc-list-item__text">
+      <span class="mdc-list-item__primary-text"><%= product.name %></span>
+      <span class="mdc-list-item__secondary-text"><%= product.description %></span>
+    </span>
+  </a>
+  <% } %>
+</ul>

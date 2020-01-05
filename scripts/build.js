@@ -29,6 +29,7 @@ async function render (filename) {
     {
       peopleBrief: fs.readFileSync(path.resolve(__dirname, '../data/people/brief.json')),
       productBrief: fs.readFileSync(path.resolve(__dirname, '../data/products/brief.json')),
+      productIndex: require('../data/products/index.json'),
     },
     { root: path.resolve(__dirname, '../src/') },
   )

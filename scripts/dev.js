@@ -23,6 +23,7 @@ const server = http.createServer(async (req, resp) => {
       {
         peopleBrief: fs.readFileSync(path.resolve(__dirname, '../data/people/brief.json')),
         productBrief: fs.readFileSync(path.resolve(__dirname, '../data/products/brief.json')),
+        productIndex: JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/products/index.json')).toString()),
       },
       { root: path.resolve(__dirname, '../src/') },
     )

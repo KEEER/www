@@ -4,7 +4,7 @@
         "name": "KEEER Vote",
         "slogan": "Collect your data your way.",
         "introduction": "KEEER Vote 是一个多功能的数据收集平台，它允许您轻松制作并发布问卷。敬请期待！",
-        "productLink": "/products/vote",
+        "productLink": "/products/labs/vote",
         "useLink": "https://vote-lab.keeer.net:20443/"
     },
     {
@@ -12,7 +12,7 @@
         "name": "KEEER Time Manager",
         "slogan": "No bother, it can actually manage your time.",
         "introduction": "KEEER Time Manager 是一个可以真正为你规划时间的软件。敬请期待！",
-        "productLink": "/products/ktm",
+        "productLink": "/products/labs/ktm",
         "useLink": " "
     }
 ]

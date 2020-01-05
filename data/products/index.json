@@ -1,0 +1,102 @@
+{
+  "services": [
+    {
+      "name": "Cloud Print",
+      "link": "cloud-print",
+      "icon": "https://print.keeer.net/static/img/logo.png",
+      "description": "TODO"
+    }
+  ],
+  "games": [
+    {
+      "name": "Traps N' Roads",
+      "link": "traps-n-roads",
+      "icon": "/img/logo/light-square.jpg",
+      "description": "TODO"
+    },
+    {
+      "name": "Crasher",
+      "link": "crasher",
+      "icon": "/img/logo/light-square.jpg",
+      "description": "TODO"
+    },
+    {
+      "name": "256",
+      "link": "https://about.keeer.net/256/",
+      "icon": "/img/logo/light-square.jpg",
+      "description": "TODO"
+    },
+    {
+      "name": "FractalRooms",
+      "link": "fractalrooms",
+      "icon": "/img/logo/light-square.jpg",
+      "description": "TODO"
+    },
+    {
+      "name": "Buildhome",
+      "link": "buildhome",
+      "icon": "/img/logo/light-square.jpg",
+      "description": "TODO"
+    }
+  ],
+  "tools": [
+    {
+      "name": "高考头像生成",
+      "link": "https://keeer.net/gkavatar/",
+      "icon": "/img/logo/dark-square.jpg",
+      "description": "TODO"
+    },
+    {
+      "name": "自动评教",
+      "link": "https://keeer.net/autolunyu/",
+      "icon": "/img/logo/dark-square.jpg",
+      "description": "TODO"
+    }
+  ],
+  "labs": [
+    {
+      "name": "Vote",
+      "link": "vote",
+      "icon": "/img/logo/vote.svg",
+      "description": "WIP"
+    },
+    {
+      "name": "社联管理系统",
+      "link": "https://sau-lab.keeer.net/",
+      "icon": "/img/logo/light-square.jpg",
+      "description": "TODO"
+    }
+  ],
+  "meta": [
+    {
+      "name": "KEEER Git",
+      "link": "https://webgit.keeer.net/",
+      "icon": "https://webgit.keeer.net/img/gitea-sm.png",
+      "description": "TODO"
+    },
+    {
+      "name": "账号系统",
+      "link": "https://account.keeer.net/",
+      "icon": "/img/logo/dark-square.jpg",
+      "description": "一切 KEEER 服务的基石。"
+    },
+    {
+      "name": "博客",
+      "link": "https://blog.keeer.net/",
+      "icon": "/img/logo/dark-square.jpg",
+      "description": "TODO"
+    },
+    {
+      "name": "论坛",
+      "link": "https://forum.keeer.net/",
+      "icon": "/img/logo/dark-square.jpg",
+      "description": "TODO"
+    },
+    {
+      "name": "Old homes",
+      "link": "www",
+      "icon": "/img/logo/dark-square.jpg",
+      "description": "老家（误"
+    }
+  ]
+}
