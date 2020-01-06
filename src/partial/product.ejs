@@ -1,0 +1,28 @@
+<%- include('/partial/header', {title: `${name} - 产品`}) %>
+
+<div class="container dark header nohide">
+  <div>
+    <div class="header-info">
+      <div class="header-info__avatar-wrapper">
+        <img src="<%- icon %>" class="header-info__avatar">
+      </div>
+      <div class="header-info__basics">
+        <h1 class="mdc-typography mdc-typography--headline2 header-info__name"><%= name %></h1>
+        <h3 class="mdc-typography mdc-typography--subtitle1 header-info__description"><%= description %></h3>
+        <a href="<%- useLink %>" class="mdc-button mdc-button--outlined">
+          <div class="mdc-button__ripple"></div>
+          <i class="mdc-button__icon" aria-hidden="true"><%- include('/img/next.svg') %></i>
+          <span class="mdc-button__label">开始使用</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container light">
+  <div class="mdc-typography--body1">
+    <p>TODO</p>
+  </div>
+</div>
+
+<%- include('/partial/footer')%>

@@ -207,50 +207,50 @@ body {
   flex: 0;
 }
 
-.person-info {
+.header-info {
   display: flex;
   align-items: center;
 }
 
-.avatar-wrapper, .avatar-wrapper > * {
+.header-info__avatar-wrapper, .header-info__avatar-wrapper > * {
   width: 148px;
   height: 148px;
 }
 
-.avatar-wrapper > * {
+.person .header-info__avatar-wrapper > * {
   border-radius: 50%;
   border: 2px solid #f5fafd;
 }
 
-.person-basics {
+.header-info__basics {
   flex: auto;
   margin-left: 16px;
 }
 
-.person-name {
+.header-info__name {
   margin-top: 14px;
 }
 
-.person-speciality {
+.header-info__description {
   color: #abafb1;
 }
 
-.avatar-wrapper {
+.header-info__avatar-wrapper {
   margin: 16px 16px 16px 0;
 }
 
 @media(max-width: 794px) {
-  .person-info {
+  .header-info__info {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .avatar-wrapper, .avatar-wrapper > * {
+  .header-info__avatar-wrapper, .header-info__avatar-wrapper > * {
     width: 128px;
     height: 128px;
   }
 
-  .avatar-wrapper {
+  .header-info__avatar-wrapper {
     margin-left: 16px;
   }
 }
@@ -270,4 +270,14 @@ body {
 .logo--headline, .logo--headline > svg {
   display: block;
   width: 180px;
+}
+
+.mdc-button__icon > * {
+  width: 18px;
+  height: 18px;
+  vertical-align: inherit;
+}
+
+.mdc-button__icon > svg {
+  fill: var(--mdc-theme-primary);
 }
