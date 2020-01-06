@@ -255,7 +255,10 @@ body {
   }
 }
 
-.products__product-icon, .mdc-list--avatar-list .products__product-icon.mdc-list-item__graphic {
+.products__product-icon, .mdc-list--avatar-list .products__product-icon.mdc-list-item__graphic,
+.products__product-icon > img, .mdc-list--avatar-list .products__product-icon.mdc-list-item__graphic > img,
+.products__product-icon > svg, .mdc-list--avatar-list .products__product-icon.mdc-list-item__graphic > svg
+{
   width: 50px;
   height: 50px;
 }
