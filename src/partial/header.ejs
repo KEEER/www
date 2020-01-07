@@ -16,13 +16,19 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/card@3.1.0/dist/mdc.card.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/ripple@3.1.0/dist/mdc.ripple.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/top-app-bar@3.1.0/dist/mdc.top-app-bar.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/icon-button@3.1.0/dist/mdc.icon-button.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/list@3.1.0/dist/mdc.list.min.css">
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/animate.css">
 </head>
 <body class="mdc-typography">
-  <span id="login-panel"><a class="mdc-button" href="https://account.keeer.net/login#login">登录</a> <a class="mdc-button mdc-button--outlined" href="https://account.keeer.net/login#signup">注册</a></span>
-  <header class="mdc-top-app-bar mdc-top-app-bar--fixed hidden" id="appbar">
+  <% const backable = typeof back !== 'undefined' && back %>
+  <% if (backable) { %><span id="back"><button onclick="history.back()" class="mdc-icon-button icon"><%- include('/img/back.svg') %></button></span><% } %>
+  <span id="login-panel">
+    <a class="mdc-button" href="https://account.keeer.net/login?tab=login">登录</a>
+    <a class="mdc-button mdc-button--outlined" href="https://account.keeer.net/login?tab=signup">注册</a>
+  </span>
+  <header class="mdc-top-app-bar mdc-top-app-bar--fixed hidden<% if (backable) { %> backable<% } %>" id="appbar">
     <div class="mdc-top-app-bar__row">
       <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start container">
         <span class="mdc-top-app-bar__title"><a class="logo-appbar" href="/?utm_source=topappbar"><%- include('/img/logo/light-large.svg') %></a></span>

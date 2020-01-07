@@ -27,8 +27,8 @@ async function render (filename) {
   const newname = filename.replace('src', 'dist').replace(/.ejs$/, '.html')
   const res = await ejs.renderFile(filename,
     {
-      peopleBrief: fs.readFileSync(path.resolve(__dirname, '../data/people/brief.json')),
-      productBrief: fs.readFileSync(path.resolve(__dirname, '../data/products/brief.json')),
+      peopleBrief: require('../data/people/brief.json'),
+      productBrief: require('../data/products/brief.json'),
       productIndex: require('../data/products/index.json'),
     },
     { root: path.resolve(__dirname, '../src/') },

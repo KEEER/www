@@ -28,8 +28,9 @@
     appbar.classList.remove('hidden')
   }
 
-  var ripples = [].concat(Array.from($$('[data-ripple]')), Array.from($$('.mdc-button')))
+  var ripples = [].concat(Array.from($$('[data-ripple]')), Array.from($$('.mdc-button')), Array.from($$('.mdc-icon-button')))
   for (var i = 0; i < ripples.length; i++) {
-    mdc.ripple.MDCRipple.attachTo(ripples[i])
+    var ripple = mdc.ripple.MDCRipple.attachTo(ripples[i])
+    if (ripples[i].classList.contains('mdc-icon-button')) ripple.unbounded = true
   }
 })()

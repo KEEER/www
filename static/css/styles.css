@@ -62,6 +62,11 @@ body {
   fill: #f5fafd;
 }
 
+.dark :not(.mdc-list--non-interactive) > :not(.mdc-list-item--disabled).mdc-list-item::before,
+.dark :not(.mdc-list--non-interactive) > :not(.mdc-list-item--disabled).mdc-list-item::after {
+  background: #f5fafd;
+}
+
 /* helpers */
 .align-center {
   text-align: center;
@@ -115,7 +120,7 @@ body {
   opacity: 0.9;
 }
 
-/* login panel */
+/* login panel, back button */
 #login-panel {
   position: fixed;
   top: 14px;
@@ -124,10 +129,37 @@ body {
   z-index: 5;
 }
 
+#back {
+  position: fixed;
+  top: 7px;
+  left: 7px;
+  --mdc-theme-primary: #f5fafd;
+  z-index: 5;
+}
+
+#back .mdc-icon-button::before, #back .mdc-icon-button::after {
+  background: #f5fafd;
+}
+
+#back svg {
+  fill: #f5fafd;
+}
+
 @media(max-width: 599px) {
   #login-panel {
     top: 10px;
     right: 10px;
+  }
+
+  #back {
+    top: 4px;
+    left: 4px;
+  }
+}
+
+@media(max-width: 890px) {
+  #appbar.backable .logo-appbar {
+    margin-left: 24px;
   }
 }
 
