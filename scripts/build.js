@@ -31,7 +31,7 @@ async function render (filename) {
       productBrief: require('../data/products/brief.json'),
       productIndex: require('../data/products/index.json'),
     },
-    { root: path.resolve(__dirname, '../src/') },
+    { root: path.resolve(__dirname, '../src/'), rmWhitespace: true },
   )
   mkdirpSync(newname.replace(/(\/|\\)[^/\\]*$/, ''))
   fs.writeFileSync(newname, res)
