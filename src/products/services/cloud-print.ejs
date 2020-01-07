@@ -3,4 +3,16 @@
   description: 'TODO',
   icon: 'https://print.keeer.net/static/img/logo.png',
   useLink: 'https://print.keeer.net/',
+  introduction: `
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  2Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  3Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  `,
+  members: [
+    { ...peopleBrief.find(p => p.id === 'queue'), works: [ 'design', 'develop' ] },
+    { ...peopleBrief.find(p => p.id === 'egamad'), works: [ 'develop' ] },
+    { ...peopleBrief.find(p => p.id === 'alan'), works: [ 'design', 'develop' ] },
+    { ...peopleBrief.find(p => p.id === 'indogent'), works: [ 'arts' ] },
+    { ...peopleBrief.find(p => p.id === 'tom'), works: [ 'hardware' ] },
+  ],
 }) %>

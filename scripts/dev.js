@@ -6,6 +6,8 @@ const url = require('url')
 
 ejs.rmWhitespace = true
 
+const dataFile = pathname => JSON.parse(fs.readFileSync(path.resolve(__dirname, `../data/${pathname}.json`)))
+
 const server = http.createServer(async (req, resp) => {
   let pathname = url.parse(req.url).pathname
   if (pathname === '/') pathname = '/index'
@@ -21,9 +23,9 @@ const server = http.createServer(async (req, resp) => {
     html = await ejs.renderFile(
       path.resolve(__dirname, `../src/${pathname}.ejs`),
       {
-        peopleBrief: fs.readFileSync(path.resolve(__dirname, '../data/people/brief.json')),
-        productBrief: fs.readFileSync(path.resolve(__dirname, '../data/products/brief.json')),
-        productIndex: JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/products/index.json')).toString()),
+        peopleBrief: dataFile('people/brief'),
+        productBrief: dataFile('products/brief'),
+        productIndex: dataFile('products/index'),
       },
       { root: path.resolve(__dirname, '../src/') },
     )

@@ -14,7 +14,7 @@
       <a href="/products/" class="mdc-button mdc-button--unelevated">查看全部</a>
     </div>
     <div id="products-gallery">
-      <% for(let product of JSON.parse(productBrief)) { %>
+      <% for(let product of productBrief) { %>
       <%- include('/partial/product-card', {
         heroUrl: product.heroUrl,
         name: product.name,
@@ -47,14 +47,8 @@
       <h1 class="mdc-typography--headline4">认识我们的团队</h1>
       <button class="mdc-button mdc-button--unelevated" id="switchPerson">换一个</button>
     </div>
-    <% for(let person of JSON.parse(peopleBrief)) { %>
-    <%- include('/partial/people-card', {
-      avatarUrl: person.avatarUrl,
-      name: person.name,
-      position: person.position,
-      introduction: person.introduction,
-      url: person.url
-    }) %>    
+    <% for(let person of peopleBrief) { %>
+    <%- include('/partial/people-card', person) %>    
     <% } %>
   </div>
   <script src="/js/switch.js"></script>

@@ -1,10 +1,30 @@
 <div class="mdc-card people">
-  <a href="<%- url %>" class="mdc-card__primary-action" data-ripple tabindex="0">
+  <% const hasWorks = typeof works !== 'undefined' && Array.isArray(works) %>
+  <a href="/people/<%- encodeURIComponent(id) %>" class="mdc-card__primary-action" data-ripple tabindex="0">
     <div class="mdc-card__media mdc-card__media--square" style="background-image: url(&quot;<%- avatarUrl %>&quot;);"></div>
-    <div class="mdc-card__primary">
+    <div class="mdc-card__primary people__primary">
       <h2 class="mdc-card__title mdc-typography mdc-typography--headline6"><%= name %></h2>
-      <h3 class="mdc-card__subtitle mdc-typography mdc-typography--subtitle2"><%= position %></h3>
+      <% if (hasWorks) { %>
+        <p class="mdc-card__subtitle mdc-typography--subtitle1">
+        <% for (let work of works) switch (work) {
+          case 'design': %>
+            <i class="icon"><%- include('/img/design.svg') %></i> 设计 <span class="divider"></span>
+          <% break
+          case 'develop': %>
+            <i class="icon"><%- include('/img/develop.svg') %></i> 开发 <span class="divider"></span>
+          <% break
+          case 'arts': %>
+            <i class="icon"><%- include('/img/arts.svg') %></i> 艺术 <span class="divider"></span>
+          <% break
+          case 'hardware': %>
+            <i class="icon"><%- include('/img/hardware.svg') %></i> 硬件 <span class="divider"></span>
+          <% break
+        } %>
+        </p>
+      <% } else { %>
+        <h3 class="mdc-card__subtitle mdc-typography mdc-typography--subtitle2"><%= position %></h3>
+      <% } %>
     </div>
   </a>
-  <div class="mdc-card__secondary mdc-typography mdc-typography--body2"><%= introduction %></div>
+  <% if (!hasWorks) { %><div class="mdc-card__secondary mdc-typography mdc-typography--body2"><%= introduction %></div><% } %>
 </div>
