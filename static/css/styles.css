@@ -294,7 +294,7 @@ body {
 }
 
 .header-info__name {
-  margin-top: 14px;
+  margin-top: 0;
   margin-bottom: 8px;
 }
 
@@ -322,6 +322,20 @@ body {
     margin-left: 16px;
     margin-bottom: 0;
   }
+
+  .header-info__name {
+    margin-top: 14px;
+  }
+}
+
+/* product */
+.container.header.product {
+  background-position: center;
+  background-size: cover;
+}
+
+.container.header.product > *::after {
+  flex: 0;
 }
 
 .products__product-icon, .mdc-list--avatar-list .products__product-icon.mdc-list-item__graphic,
