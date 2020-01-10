@@ -6,20 +6,9 @@
       <h2 class="mdc-card__title mdc-typography mdc-typography--headline6"><%= name %></h2>
       <% if (hasWorks) { %>
         <p class="mdc-card__subtitle mdc-typography--subtitle1">
-        <% for (let work of works) switch (work) {
-          case 'design': %>
-            <i class="icon"><%- include('/img/design.svg') %></i> 设计 <span class="divider"></span>
-          <% break
-          case 'develop': %>
-            <i class="icon"><%- include('/img/develop.svg') %></i> 开发 <span class="divider"></span>
-          <% break
-          case 'arts': %>
-            <i class="icon"><%- include('/img/arts.svg') %></i> 艺术 <span class="divider"></span>
-          <% break
-          case 'hardware': %>
-            <i class="icon"><%- include('/img/hardware.svg') %></i> 硬件 <span class="divider"></span>
-          <% break
-        } %>
+        <% for (let work of works) { %>
+          <%- include('/partial/work', { work }) %> <span class="divider"></span>
+        <% } %>
         </p>
       <% } else { %>
         <h3 class="mdc-card__subtitle mdc-typography mdc-typography--subtitle2"><%= position %></h3>

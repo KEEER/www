@@ -30,6 +30,7 @@ async function render (filename) {
       peopleBrief: require('../data/people/brief.json'),
       productBrief: require('../data/products/brief.json'),
       productIndex: require('../data/products/index.json'),
+      productAll: eval(fs.readFileSync('./data/products/all.js').toString()),
     },
     { root: path.resolve(__dirname, '../src/'), rmWhitespace: true },
   )

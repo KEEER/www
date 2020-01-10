@@ -1,15 +1,16 @@
-<%- include('/partial/header', { title: `${name} - 产品`, back: true }) %>
+<% const product = productAll[group][id] %>
+<%- include('/partial/header', { title: `${product.name} - 产品`, back: true }) %>
 
 <div class="container dark header product nohide">
   <div>
     <div class="header-info">
       <div class="header-info__avatar-wrapper">
-        <img src="<%- icon %>" class="header-info__avatar">
+        <img src="<%- product.icon %>" class="header-info__avatar">
       </div>
       <div class="header-info__basics">
-        <h1 class="mdc-typography mdc-typography--headline2 header-info__name"><%= name %></h1>
-        <h3 class="mdc-typography mdc-typography--subtitle1 header-info__description"><%= description %></h3>
-        <a href="<%- useLink %>" class="mdc-button mdc-button--outlined">
+        <h1 class="mdc-typography mdc-typography--headline2 header-info__name"><%= product.name %></h1>
+        <h3 class="mdc-typography mdc-typography--subtitle1 header-info__description"><%= product.description %></h3>
+        <a href="<%- product.useLink %>" class="mdc-button mdc-button--outlined">
           <div class="mdc-button__ripple"></div>
           <i class="mdc-button__icon" aria-hidden="true"><%- include('/img/next.svg') %></i>
           <span class="mdc-button__label">开始使用</span>
@@ -21,11 +22,13 @@
 
 <div class="container light">
   <div class="mdc-typography--body1">
-    <% for (let p of introduction.split('\n').map(p => p.trim()).filter(p => !!p)) { %>
+    <% for (let p of product.introduction.split('\n').map(p => p.trim()).filter(p => !!p)) { %>
       <p><%= p %></p>
     <% } %>
     <h2 class="mdc-typography mdc-typography--headline3">团队</h2>
-    <% for (let member of members) { %><%- include('/partial/people-card', member) %><br /><% } %>
+    <% for (let member of product.members) { %>
+      <%- include('/partial/people-card', { ...peopleBrief.find(p => p.id === member.id), works: member.works }) %><br />
+    <% } %>
   </div>
 </div>
 

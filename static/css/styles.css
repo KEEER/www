@@ -227,6 +227,11 @@ body {
   flex-direction: row;
 }
 
+.product .mdc-card__media.mdc-card__media--square {
+  margin: 16px;
+  width: 78px;;
+}
+
 .people .mdc-card__media:first-child {
   border-radius: 4px;
 }

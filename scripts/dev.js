@@ -26,6 +26,7 @@ const server = http.createServer(async (req, resp) => {
         peopleBrief: dataFile('people/brief'),
         productBrief: dataFile('products/brief'),
         productIndex: dataFile('products/index'),
+        productAll: eval(fs.readFileSync('./data/products/all.js').toString()),
       },
       { root: path.resolve(__dirname, '../src/') },
     )
