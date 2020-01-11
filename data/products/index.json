@@ -22,19 +22,19 @@
     },
     {
       "name": "256",
-      "link": "https://about.keeer.net/256/",
+      "link": "https://about.keeer.net/256/?utm_source=www",
       "icon": "/img/logo/light-square.jpg",
       "description": "TODO"
     },
     {
       "name": "FractalRooms",
-      "link": "fractalrooms",
+      "link": "fractal-rooms",
       "icon": "/img/logo/light-square.jpg",
       "description": "TODO"
     },
     {
       "name": "Buildhome",
-      "link": "buildhome",
+      "link": "https://blog.keeer.net/2019/01/GGJ-2019/",
       "icon": "/img/logo/light-square.jpg",
       "description": "TODO"
     }
@@ -42,13 +42,13 @@
   "tools": [
     {
       "name": "高考头像生成",
-      "link": "https://keeer.net/gkavatar/",
+      "link": "https://keeer.net/gkavatar/?utm_source=www",
       "icon": "/img/logo/dark-square.jpg",
       "description": "TODO"
     },
     {
       "name": "自动评教",
-      "link": "https://keeer.net/autolunyu/",
+      "link": "https://keeer.net/autolunyu/?utm_source=www",
       "icon": "/img/logo/dark-square.jpg",
       "description": "TODO"
     }
@@ -62,7 +62,7 @@
     },
     {
       "name": "社联管理系统",
-      "link": "https://sau-lab.keeer.net/",
+      "link": "https://sau-lab.keeer.net/?utm_source=www",
       "icon": "/img/logo/light-square.jpg",
       "description": "TODO"
     }
@@ -70,25 +70,25 @@
   "meta": [
     {
       "name": "KEEER Git",
-      "link": "https://webgit.keeer.net/",
+      "link": "https://webgit.keeer.net/?utm_source=www",
       "icon": "https://webgit.keeer.net/img/gitea-sm.png",
       "description": "TODO"
     },
     {
       "name": "账号系统",
-      "link": "https://account.keeer.net/",
+      "link": "https://account.keeer.net/?utm_source=www",
       "icon": "/img/logo/dark-square.jpg",
       "description": "一切 KEEER 服务的基石。"
     },
     {
       "name": "博客",
-      "link": "https://blog.keeer.net/",
+      "link": "https://blog.keeer.net/?utm_source=www",
       "icon": "/img/logo/dark-square.jpg",
       "description": "TODO"
     },
     {
       "name": "论坛",
-      "link": "https://forum.keeer.net/",
+      "link": "https://forum.keeer.net/?utm_source=www",
       "icon": "/img/logo/dark-square.jpg",
       "description": "TODO"
     },

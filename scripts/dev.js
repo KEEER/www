@@ -33,7 +33,7 @@ const server = http.createServer(async (req, resp) => {
       const group = isProductPage[1]
       const id = isProductPage[2]
       const products = productAll()
-      if (products[group] && products[group][id]) {
+      if (products[group] && products[group][id] && !products[group][id].norender) {
         return html = await ejs.renderFile(
           path.resolve(__dirname, '../src/partial/product.ejs'),
           {

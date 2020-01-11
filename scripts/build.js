@@ -31,6 +31,7 @@ for (let file of filelist) {
 
 for (let group in data.productAll) {
   for (let id in data.productAll[group]) {
+    if (data.productAll[group][id].norender) continue
     render(
       path.resolve(__dirname, '../src/partial/product.ejs'),
       { group, id },
