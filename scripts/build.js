@@ -5,6 +5,12 @@ const { mkdirpSync, copySync } = require('fs-extra')
 
 const base = path.resolve(__dirname, '../src')
 const dirlist = [ base ]
+const data = {
+  peopleBrief: require('../data/people/brief.json'),
+  productBrief: require('../data/products/brief.json'),
+  productIndex: require('../data/products/index.json'),
+  productAll: eval(fs.readFileSync('./data/products/all.js').toString()),
+}
 const filelist = []
 for (let dir of dirlist) {
   if (dir.endsWith('partial') || dir.endsWith('img')) continue
@@ -23,15 +29,20 @@ for (let file of filelist) {
   render(file)
 }
 
-async function render (filename) {
-  const newname = filename.replace('src', 'dist').replace(/.ejs$/, '.html')
+for (let group in data.productAll) {
+  for (let id in data.productAll[group]) {
+    render(
+      path.resolve(__dirname, '../src/partial/product.ejs'),
+      { group, id },
+      path.resolve(__dirname, `../src/products/${group}/${id}.ejs`),
+    )
+  }
+}
+
+async function render (filename, extraOptions = {}, toFileId = filename) {
+  const newname = toFileId.replace('src', 'dist').replace(/.ejs$/, '.html')
   const res = await ejs.renderFile(filename,
-    {
-      peopleBrief: require('../data/people/brief.json'),
-      productBrief: require('../data/products/brief.json'),
-      productIndex: require('../data/products/index.json'),
-      productAll: eval(fs.readFileSync('./data/products/all.js').toString()),
-    },
+    { ...data, ...extraOptions },
     { root: path.resolve(__dirname, '../src/'), rmWhitespace: true },
   )
   mkdirpSync(newname.replace(/(\/|\\)[^/\\]*$/, ''))
