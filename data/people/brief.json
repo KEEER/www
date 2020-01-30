@@ -14,7 +14,7 @@
     "id": "indogent"
   },
   {
-    "avatarUrl": "https://image.shutterstock.com/image-photo/lionfishsun-ocean-260nw-50574877.jpg",
+    "avatarUrl": "/img/avatar/queue.jpg",
     "name": "霍岱宣",
     "position": "开发者",
     "introduction": "KEEER骚话最多的开发者，顺便也是KEEER的创始人。",
@@ -28,10 +28,38 @@
     "id": "egamad"
   },
   {
-    "avatarUrl": "https://image.shutterstock.com/image-photo/lionfishsun-ocean-260nw-50574877.jpg",
+    "avatarUrl": "/img/avatar/tom.jpg",
     "name": "吴雨峻",
     "position": "硬件工程师",
     "introduction": "可以把任何电子废品变成性能超强的电脑。",
     "id": "tom"
+  },
+  {
+    "avatarUrl": "/img/avatar/welen.jpg",
+    "name": "吴习哲",
+    "position": "开发者",
+    "introduction": "喜爱coding的蒟蒻",
+    "id": "welen"
+  },
+  {
+    "avatarUrl": "/img/avatar/andy.jpg",
+    "name": "李知非",
+    "position": "开发者",
+    "introduction": "Developer. OIer.",
+    "id": "andy"
+  },
+  {
+    "avatarUrl": "/img/avatar/emma.jpg",
+    "name": "樊天怡",
+    "position": "文职工作者",
+    "introduction": "🤓 🤓",
+    "id": "emma"
+  },
+  {
+    "avatarUrl": "/img/avatar/peter.jpg",
+    "name": "陈雪松",
+    "position": "开发者",
+    "introduction": "提出奇怪的建议",
+    "id": "peter"
   }
 ]
