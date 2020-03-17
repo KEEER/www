@@ -4,7 +4,7 @@ const normalizedLink = /^https?:\/\//.test(link) ?
   `/products/${encodeURIComponent(group)}/${encodeURIComponent(link)}`
 %>
 
-<div class="mdc-card product">
+<div class="mdc-card product reveal">
   <% const hasWorks = typeof works !== 'undefined' && Array.isArray(works) %>
   <a href="<%- normalizedLink %>" class="mdc-card__primary-action" data-ripple tabindex="0">
     <div class="mdc-card__media mdc-card__media--square" style="background-image: url(&quot;<%- icon %>&quot;);"></div>

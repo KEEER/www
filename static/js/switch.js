@@ -1,7 +1,7 @@
 ;(function () {
   var $ = function (sel) { return document.querySelector(sel) }
   var $$ = function (sel) { return document.querySelectorAll(sel) }
-  switchButton = $('#switchPerson')
+  switchButton = $('#switch-person')
   peopleList = $$('.people')
   for (var i = 0; i < peopleList.length; i++) {
     peopleList[i].style.display = 'none'

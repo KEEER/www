@@ -3,7 +3,7 @@
     {
       "name": "Cloud Print",
       "link": "cloud-print",
-      "icon": "https://print.keeer.net/static/img/logo.png",
+      "icon": "/img/logo/cloud-print.png",
       "description": "TODO"
     }
   ],

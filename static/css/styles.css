@@ -8,14 +8,45 @@ body {
 }
 
 /* container */
+
 .container {
   padding: 16px;
   display: flex;
+  box-sizing: border-box;
 }
 
 .container > * {
   width: 100%;
-  max-width: 750px;
+  max-width: 1024px;
+}
+.reveal, .container > * {
+  opacity: 0;
+  -webkit-transform: scale(.8);
+  -moz-transform: scale(.8);
+  -ms-transform: scale(.8);
+  -o-transform: scale(.8);
+  transform: scale(.8);
+  -webkit-transition: .25s cubic-bezier(0.4, 0, 0.2, 1) .2s;
+  -moz-transition: .25s cubic-bezier(0.4, 0, 0.2, 1) .2s;
+  -o-transition: .25s cubic-bezier(0.4, 0, 0.2, 1) .2s;
+  transition: .25s cubic-bezier(0.4, 0, 0.2, 1) .2s;
+  -webkit-transition-property: transform, opacity;
+  -moz-transition-property: transform, opacity;
+  -o-transition-property: transform, opacity;
+  transition-property: transform, opacity;
+}
+.container.footer > * { transition: none; }
+.nojs .container > *, .container[data-show] > *,
+.nojs .reveal, .reveal[data-show],
+.container.footer > *,
+.container.mdc-top-app-bar__section > * /* top app bar */
+{
+  opacity: 1;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
 }
 
 .container::before, .container::after {
@@ -25,7 +56,10 @@ body {
 }
 
 .container.header {
-  height: 400px;
+  height: 432px;
+}
+.container.header.index {
+  height: 576px;
 }
 
 .container.header > * {
@@ -121,10 +155,10 @@ body {
 }
 
 /* login panel, back button */
-#login-panel {
+#idframe {
   position: fixed;
-  top: 14px;
-  right: 14px;
+  top: 12px;
+  right: 12px;
   --mdc-theme-primary: #f5fafd;
   z-index: 5;
 }
@@ -146,9 +180,9 @@ body {
 }
 
 @media(max-width: 599px) {
-  #login-panel {
-    top: 10px;
-    right: 10px;
+  #idframe {
+    top: 8px;
+    right: 8px;
   }
 
   #back {
@@ -157,7 +191,7 @@ body {
   }
 }
 
-@media(max-width: 890px) {
+@media(max-width: 1130px) {
   #appbar.backable .logo-appbar {
     margin-left: 24px;
   }
@@ -170,13 +204,11 @@ body {
   top: 0;
 }
 
-#appbar.hidden {
-  top: -64px;
-}
+#appbar.hidden { top: -64px; }
+.nojs #appbar.hidden { top: 0; }
 
-#appbar.opaque {
-  background-color: rgba(0, 45, 77, 0);
-}
+#appbar.opaque { background-color: rgba(0, 45, 77, 0); }
+.nojs #appbar.opaque { background-color: #002d4d; }
 
 /* index */
 .container.header.index {
@@ -195,13 +227,16 @@ body {
   margin: 6px 0;
 }
 
+#products-gallery > .mdc-card.extra { display: none; }
+
 @media(min-width: 794px) {
   #products-gallery {
     justify-content: space-between;
+    align-items: start;
   }
 
   #products-gallery > .mdc-card {
-    width: 368px;
+    width: 49%;
   }
 
   .mdc-typography--headline2 {
@@ -210,12 +245,18 @@ body {
   }
 }
 
+@media(min-width: 1056px) {
+  #products-gallery > .mdc-card { width: 336px; }
+  #products-gallery > .mdc-card.extra { display: flex; }
+}
+
 @media(max-width: 794px) {
   .mdc-typography--headline2 {
     font-size: 2.125rem;
     line-height: 2.5rem;
     margin-bottom: 0;
   }
+  #products-gallery > .mdc-card.extra { display: flex; }
 }
 
 .mdc-card__primary {
@@ -229,7 +270,8 @@ body {
 
 .product .mdc-card__media.mdc-card__media--square {
   margin: 16px;
-  width: 78px;;
+  width: 78px;
+  border-radius: 0;
 }
 
 .people .mdc-card__media:first-child {
@@ -329,7 +371,7 @@ body {
   }
 
   .header-info__name {
-    margin-top: 14px;
+    margin-top: 32px;
   }
 }
 
@@ -339,9 +381,15 @@ body {
   background-size: cover;
 }
 
-.container.header.product > *::after {
-  flex: 0;
+@media(max-width: 794px) {
+  .container.header.products { height: 400px; }
 }
+.products .headline { margin-bottom: 48px; }
+.container.header.product > *::after, .container.header.products > *::after { flex: 0; }
+.container.header.products { background: linear-gradient(64deg, #9a1b99, #002d4d); }
+.container.games { background: linear-gradient(64deg, #d32f2f, #961b97); }
+.container.labs { background: linear-gradient(64deg, #f47b00, #d32f2f); }
+.container.header.products, .container.games, .container.labs { background-attachment: fixed; }
 
 .products__product-icon, .mdc-list--avatar-list .products__product-icon.mdc-list-item__graphic,
 .products__product-icon > img, .mdc-list--avatar-list .products__product-icon.mdc-list-item__graphic > img,
@@ -349,6 +397,20 @@ body {
 {
   width: 50px;
   height: 50px;
+}
+
+@media(min-width: 794px) {
+  .product-group {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .product-group > .mdc-list-item {
+    box-sizing: border-box;
+    width: 50%;
+  }
+}
+@media(min-width: 1056px) {
+  .product-group > .mdc-list-item { width: 33%; }
 }
 
 .headline {

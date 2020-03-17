@@ -4,7 +4,7 @@
       name: 'Cloud Print',
       link: 'cloud-print',
       description: 'TODO',
-      icon: 'https://print.keeer.net/static/img/logo.png',
+      icon: '/img/logo/cloud-print.png',
       useLink: 'https://print.keeer.net/?utm_source=www',
       introduction: `
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

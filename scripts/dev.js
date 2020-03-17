@@ -18,7 +18,7 @@ const ejsOptions = { root: path.resolve(__dirname, '../src/') }
 
 const server = http.createServer(async (req, resp) => {
   let pathname = url.parse(req.url).pathname
-  if (pathname === '/') pathname = '/index'
+  if (pathname.endsWith('/')) pathname += 'index'
   try {
     let file = fs.readFileSync(path.resolve(__dirname, '../static/', pathname.substr(1)))
     resp.writeHead(200)

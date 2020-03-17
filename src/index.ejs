@@ -15,14 +15,7 @@
     </div>
     <div id="products-gallery">
       <% for(let product of productBrief) { %>
-      <%- include('/partial/product-card', {
-        heroUrl: product.heroUrl,
-        name: product.name,
-        slogan: product.slogan,
-        introduction: product.introduction,
-        productLink: product.productLink,
-        useLink: product.useLink,
-      }) %>
+      <%- include('/partial/product-card', product) %>
       <% } %>
     </div>
   </div>
@@ -31,13 +24,13 @@
 <div class="container dark">
   <div class="mdc-typography--body1">
     <h1 class="mdc-typography--headline4">关于我们</h1>
-    <p>KEEER初创于2015年，由成员Queue Huo和前成员Tiger Fan共同创立。在Edgaru089, Alan Liang和Sunny Peng三名成员加入，队伍逐渐成型。那时的我们本着要开发游戏的初心，创建了客页工作室。遗憾的是：这段时间，KEEER共开发游戏《Traps n' Roads》（Queue设计Egamad开发）一款。</p>
-    <p>2018年里，Tiger, Edgaru089, Sunny因故离开KEEER；同年，Rickole Xi, Egamad Yan, Indogent Chan, Linda Lee, Tom Wu, Kevin Jin的陆续加入使得KEEER拥有了前所未有的开发能力与技术水平。这使得KEEER的目标不再局限于游戏，而是提供优秀的软件服务。此外，成员Alan一直持续近三年对团队的不懈学习与付出，为KEEER的接下来的发展奠定了十分重要的基础。</p>
-    <p>2018年9月至今，KEEER共开发了游戏《256》（Alan设计并开发）、《Buildhome》（Queue设计并开发）两款；服务"自动评教"、"歌舞嘉年华官方网站"、"人大附中高考加油头像生成"、"人大附中社联在线管理系统"（均由Alan提出并完成开发）。</p>
+    <p>KEEER 初创于 2015 年，由成员 Queue Huo 和前成员 Tiger Fan 共同创立。在 Edgaru089, Alan Liang 和 Sunny Peng三名成员加入，队伍逐渐成型。那时的我们本着要开发游戏的初心，创建了客页工作室。遗憾的是：这段时间， KEEER 共开发游戏《Traps n' Roads》（Queue 设计 Egamad 开发）一款。</p>
+    <p>2018 年里，Tiger, Edgaru089, Sunny 因故离开 KEEER；同年，Rickole Xi, Egamad Yan, Indogent Chan, Linda Lee, Tom Wu, Kevin Jin 的陆续加入使得 KEEER 拥有了前所未有的开发能力与技术水平。这使得 KEEER 的目标不再局限于游戏，而是提供优秀的软件服务。此外，成员 Alan 一直持续近三年对团队的不懈学习与付出，为 KEEER 的接下来的发展奠定了十分重要的基础。</p>
+    <p>2018 年 9 月至今，KEEER 共开发了游戏《256》（Alan 设计并开发）、《Buildhome》（Queue 设计并开发）两款；服务"自动评教"、"歌舞嘉年华官方网站"、"人大附中高考加油头像生成"、"人大附中社联在线管理系统"（均由 Alan 提出并完成开发）。</p>
     <p>目前，我们正在着手开发两款更加出众的大项目，敬请期待！</p>
     <p>作为学生，我们的精力与时间也许有限，但我们将用内心中无限的热情、坚实的技术与精益求精的工匠精神结合，打造出令人满意、具有价值和意义的产品。</p>
-    <p>衷心感谢每一位KEEER的支持者！</p>
-    <p>KEEER一直欢迎能力过人、技术精湛、胸怀梦想的你！</p>
+    <p>衷心感谢每一位 KEEER 的支持者！</p>
+    <p>KEEER 一直欢迎能力过人、技术精湛、胸怀梦想的你！</p>
   </div>
 </div>
 
@@ -45,10 +38,10 @@
   <div class="mdc-typography--body1">
     <div class="title-button">
       <h1 class="mdc-typography--headline4">认识我们的团队</h1>
-      <button class="mdc-button mdc-button--unelevated" id="switchPerson">换一个</button>
+      <button class="mdc-button mdc-button--unelevated" id="switch-person">换一个</button>
     </div>
     <% for(let person of peopleBrief) { %>
-    <%- include('/partial/people-card', person) %>    
+    <%- include('/partial/people-card', person) %>
     <% } %>
   </div>
   <script src="/js/switch.js"></script>

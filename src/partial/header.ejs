@@ -19,15 +19,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/icon-button@3.1.0/dist/mdc.icon-button.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/list@3.1.0/dist/mdc.list.min.css">
   <link rel="stylesheet" href="/css/styles.css">
-  <link rel="stylesheet" href="/css/animate.css">
 </head>
-<body class="mdc-typography">
+<body class="mdc-typography nojs">
+  <script>document.body.classList.remove('nojs')</script>
   <% const backable = typeof back !== 'undefined' && back %>
-  <% if (backable) { %><span id="back"><button onclick="history.back()" class="mdc-icon-button icon"><%- include('/img/back.svg') %></button></span><% } %>
-  <span id="login-panel">
-    <a class="mdc-button" href="https://account.keeer.net/login?tab=login">登录</a>
-    <a class="mdc-button mdc-button--outlined" href="https://account.keeer.net/login?tab=signup">注册</a>
-  </span>
+  <% if (backable) { %><span id="back"><button aria-label="返回" onclick="history.back()" class="mdc-icon-button icon"><%- include('/img/back.svg') %></button></span><% } %>
+  <span id="idframe"></span>
   <header class="mdc-top-app-bar mdc-top-app-bar--fixed hidden<% if (backable) { %> backable<% } %>" id="appbar">
     <div class="mdc-top-app-bar__row">
       <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start container">
