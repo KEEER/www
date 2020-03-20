@@ -20,6 +20,7 @@
     <% for (let p of introduction.split('\n').map(p => p.trim()).filter(p => !!p)) { %>
       <p><%= p %></p>
     <% } %>
+    <div id="products" class="anchor"></div>
     <h2 class="mdc-typography mdc-typography--headline3">项目</h2>
     <%
     for (let group in productAll) {

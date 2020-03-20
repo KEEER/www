@@ -1,6 +1,6 @@
 <div class="mdc-card people reveal">
   <% const hasWorks = typeof works !== 'undefined' && Array.isArray(works) %>
-  <a href="/people/<%- encodeURIComponent(id) %>" class="mdc-card__primary-action" data-ripple tabindex="0">
+  <a href="/people/<%- encodeURIComponent(id) %>?utm_source=card<%- hasWorks ? '#products' : '' %>" class="mdc-card__primary-action" data-ripple tabindex="0">
     <div class="mdc-card__media mdc-card__media--square" style="background-image: url(&quot;<%- avatarUrl %>&quot;);"></div>
     <div class="mdc-card__primary people__primary">
       <h2 class="mdc-card__title mdc-typography mdc-typography--headline6"><%= name %></h2>

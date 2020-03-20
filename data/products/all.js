@@ -5,7 +5,7 @@
       link: 'cloud-print',
       description: 'TODO',
       icon: '/img/logo/cloud-print.png',
-      useLink: 'https://print.keeer.net/?utm_source=www',
+      useLink: 'https://print.keeer.net/?utm_source=www&utm_medium=uselink',
       introduction: `
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       2Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -57,7 +57,7 @@
     },
     256: {
       name: '256',
-      link: 'https://about.keeer.net/256/?utm_source=www',
+      link: 'https://about.keeer.net/256/?utm_source=www&utm_medium=uselink',
       description: 'TODO',
       icon: '/img/logo/light-square.jpg',
       members: [
@@ -81,7 +81,7 @@
   tools: {
     gkavatar: {
       name: '高考头像生成',
-      link: 'https://keeer.net/gkavatar/?utm_source=www',
+      link: 'https://keeer.net/gkavatar/?utm_source=www&utm_medium=uselink',
       description: 'TODO',
       icon: '/img/logo/dark-square.jpg',
       members: [
@@ -96,7 +96,7 @@
       link: 'vote',
       description: 'TODO',
       icon: '/img/logo/vote.svg',
-      useLink: 'https://vote-lab.keeer.net/Alan-Liang/test/?utm_source=www',
+      useLink: 'https://vote-lab.keeer.net/?utm_source=www&utm_medium=uselink',
       introduction: `
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       2Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -108,7 +108,7 @@
     },
     sau: {
       name: '社联管理系统',
-      link: 'https://sau-lab.keeer.net/?utm_source=www',
+      link: 'https://sau-lab.keeer.net/?utm_source=www&utm_medium=uselink',
       description: 'TODO',
       icon: '/img/logo/light-square.jpg',
       members: [
@@ -120,7 +120,7 @@
   meta: {
     kas: {
       name: '账号系统',
-      link: 'https://account.keeer.net/?utm_source=www',
+      link: 'https://account.keeer.net/?utm_source=www&utm_medium=uselink',
       description: '一切 KEEER 服务的基石。',
       icon: '/img/logo/dark-square.jpg',
       members: [
