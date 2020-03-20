@@ -169,9 +169,9 @@ body {
   margin: 8px 0;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 .footer .icon { opacity: .9; }
-
 .footer__text svg { margin-right: 12px; }
 
 .footer .link {
@@ -181,7 +181,7 @@ body {
   transition: opacity 0.2s ease-out;
   will-change: opacity;
 }
-.footer .link.text { margin: 0 4px; }
+.footer .link.text { margin: 0 4px; line-height: 2em; }
 .footer .link.text:first-child { margin-left: 0; }
 .footer .link:hover, .footer .link:focus { opacity: 0.9; }
 
