@@ -1,15 +1,13 @@
-<%- include('/partial/header', {title: '梁亚伦'}) %>
-<div class="container dark header">
-    <div>
-      <h1 class="mdc-typography--headline2">梁亚伦</h1>
-      <h3 class="mdc-typography mdc-typography--subtitle2">开发者</h3>
-      <div class="mdc-typography mdc-typography--body2">KEEER目前贡献量最大的开发者。</div>
-    </div>
-  </div>
-  
-  <div class="container light">
-    <div class="mdc-typography--body1">
-      <p>TODO</p>
-    </div>
-  </div>
-<%- include('/partial/footer')%>
+<%- include('/partial/person', {
+  id: 'alan',
+  name: '梁亚伦',
+  speciality: '开发者',
+  introduction: `
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  2Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  3Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  `,
+  motto: 'return new Promise((_, b) => b())',
+  avatar: '/img/avatar/alan.png',
+  headerImageUrl: 'https://alan-liang-blog.oss-cn-beijing.aliyuncs.com/img/index.jpg',
+}) %>

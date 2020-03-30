@@ -1,0 +1,25 @@
+<%
+const normalizedLink = /^https?:\/\//.test(link) ?
+  link :
+  `/products/${encodeURIComponent(group)}/${encodeURIComponent(link)}`
+%>
+
+<div class="mdc-card product reveal">
+  <% const hasWorks = typeof works !== 'undefined' && Array.isArray(works) %>
+  <a href="<%- normalizedLink %>" class="mdc-card__primary-action" data-ripple tabindex="0">
+    <div class="mdc-card__media mdc-card__media--square" style="background-image: url(&quot;<%- icon %>&quot;);"></div>
+    <div class="mdc-card__primary people__primary">
+      <h2 class="mdc-card__title mdc-typography mdc-typography--headline6"><%= name %></h2>
+      <% if (hasWorks) { %>
+        <p class="mdc-card__subtitle mdc-typography--subtitle1">
+        <% for (let work of works) { %>
+          <%- include('/partial/work', { work }) %> <span class="divider"></span>
+        <% } %>
+        </p>
+      <% } else { %>
+        <h3 class="mdc-card__subtitle mdc-typography mdc-typography--subtitle2"><%= description %></h3>
+      <% } %>
+    </div>
+  </a>
+  <% if (hasWorks) { %><div class="mdc-card__secondary mdc-typography mdc-typography--body2"><%= description %></div><% } %>
+</div>

@@ -1,0 +1,43 @@
+<%- include('/partial/header', { title: `${name} - 成员`, back: true }) %>
+<div class="container dark header person nohide" style="background-image: url(&quot;<%- headerImageUrl %>&quot;);">
+  <div>
+    <div class="header-info">
+      <div class="header-info__avatar-wrapper">
+        <img src="<%- avatar %>" alt="Avatar of <%= name %>" class="header-info__avatar">
+      </div>
+      <div class="header-info__basics">
+        <h1 class="mdc-typography mdc-typography--headline2 header-info__name"><%= name %></h1>
+        <h3 class="mdc-typography mdc-typography--subtitle2 header-info__description"><%= speciality %></h3>
+        <p class="mdc-typography mdc-typography--body2 person-motto"><%= motto %></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container light">
+  <div class="mdc-typography--body1">
+    <h2 class="mdc-typography mdc-typography--headline3">简介</h2>
+    <% for (let p of introduction.split('\n').map(p => p.trim()).filter(p => !!p)) { %>
+      <p><%= p %></p>
+    <% } %>
+    <div id="products" class="anchor"></div>
+    <h2 class="mdc-typography mdc-typography--headline3">项目</h2>
+    <%
+    for (let group in productAll) {
+      for (let productId in productAll[group]) {
+        const product = productAll[group][productId]
+        const info = product.members.find(m => m.id === id)
+        if (info) { %>
+          <%- include('/partial/product-card-small', {
+            group,
+            works: info.works,
+            ...peopleBrief.find(p => p.id === id),
+            ...product,
+          }) %><br>
+        <% }
+      }
+    }
+    %>
+  </div>
+</div>
+<%- include('/partial/footer')%>

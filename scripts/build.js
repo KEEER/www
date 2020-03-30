@@ -1,18 +1,25 @@
 const ejs = require('ejs')
 const fs = require('fs')
 const path = require('path')
-const mkdirp = require('mkdirp')
+const { mkdirpSync, copySync } = require('fs-extra')
 
 const base = path.resolve(__dirname, '../src')
-const dirlist = [base]
+const dirlist = [ base ]
+const data = {
+  peopleBrief: require('../data/people/brief.json'),
+  productBrief: require('../data/products/brief.json'),
+  productIndex: require('../data/products/index.json'),
+  productAll: eval(fs.readFileSync('./data/products/all.js').toString()),
+}
 const filelist = []
-for(let dir of dirlist) {
-  if(dir.endsWith('partial') || dir.endsWith('img')) continue
-  if(!dir.endsWith('.ejs')) {
+for (let dir of dirlist) {
+  if (dir.endsWith('partial') || dir.endsWith('img')) continue
+  if (!dir.endsWith('.ejs')) {
     try {
       let list = fs.readdirSync(dir).map(name => path.resolve(dir, name))
       dirlist.push(...list)
-    } catch(e) {}
+    // eslint-disable-next-line no-empty
+    } catch (e) {}
   } else {
     filelist.push(path.resolve(__dirname, '../src', dir))
   }
@@ -22,15 +29,26 @@ for (let file of filelist) {
   render(file)
 }
 
-async function render(filename) {
-  const newname = filename.replace('src', 'dist').replace(/.ejs$/, '.html')
-  const res = await ejs.renderFile(filename, 
-    {
-      peopleBrief: fs.readFileSync(path.resolve(__dirname, '../data/people/brief.json')),
-      productBrief: fs.readFileSync(path.resolve(__dirname, '../data/products/brief.json'))
-    }, 
-    {root: path.resolve(__dirname, '../src/')}
+for (let group in data.productAll) {
+  for (let id in data.productAll[group]) {
+    if (data.productAll[group][id].norender) continue
+    render(
+      path.resolve(__dirname, '../src/partial/product.ejs'),
+      { group, id },
+      path.resolve(__dirname, `../src/products/${group}/${id}.ejs`),
+    )
+  }
+}
+
+async function render (filename, extraOptions = {}, toFileId = filename) {
+  const newname = toFileId.replace('src', 'dist').replace(/.ejs$/, '.html')
+  const res = await ejs.renderFile(filename,
+    { ...data, ...extraOptions },
+    { root: path.resolve(__dirname, '../src/'), rmWhitespace: true },
   )
-  mkdirp.sync(newname.replace(/(\/|\\)[^\/\\]*$/, ''))
+  mkdirpSync(newname.replace(/(\/|\\)[^/\\]*$/, ''))
   fs.writeFileSync(newname, res)
 }
+
+mkdirpSync(path.resolve(__dirname, '../dist'))
+copySync(path.resolve(__dirname, '../static'), path.resolve(__dirname, '../dist/'))

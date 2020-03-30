@@ -1,0 +1,102 @@
+{
+  "services": [
+    {
+      "name": "Cloud Print",
+      "link": "cloud-print",
+      "icon": "/img/logo/cloud-print.png",
+      "description": "TODO"
+    }
+  ],
+  "games": [
+    {
+      "name": "Traps N' Roads",
+      "link": "traps-n-roads",
+      "icon": "/img/logo/light-square.jpg",
+      "description": "TODO"
+    },
+    {
+      "name": "Crasher",
+      "link": "crasher",
+      "icon": "/img/logo/light-square.jpg",
+      "description": "TODO"
+    },
+    {
+      "name": "256",
+      "link": "https://about.keeer.net/256/?utm_source=www",
+      "icon": "/img/logo/light-square.jpg",
+      "description": "TODO"
+    },
+    {
+      "name": "FractalRooms",
+      "link": "fractal-rooms",
+      "icon": "/img/logo/light-square.jpg",
+      "description": "TODO"
+    },
+    {
+      "name": "Buildhome",
+      "link": "https://blog.keeer.net/2019/01/GGJ-2019/",
+      "icon": "/img/logo/light-square.jpg",
+      "description": "TODO"
+    }
+  ],
+  "tools": [
+    {
+      "name": "高考头像生成",
+      "link": "https://keeer.net/gkavatar/?utm_source=www",
+      "icon": "/img/logo/dark-square.jpg",
+      "description": "TODO"
+    },
+    {
+      "name": "自动评教",
+      "link": "https://keeer.net/autolunyu/?utm_source=www",
+      "icon": "/img/logo/dark-square.jpg",
+      "description": "TODO"
+    }
+  ],
+  "labs": [
+    {
+      "name": "Vote",
+      "link": "vote",
+      "icon": "/img/logo/vote.svg",
+      "description": "WIP"
+    },
+    {
+      "name": "社联管理系统",
+      "link": "https://sau-lab.keeer.net/?utm_source=www",
+      "icon": "/img/logo/light-square.jpg",
+      "description": "TODO"
+    }
+  ],
+  "meta": [
+    {
+      "name": "KEEER Git",
+      "link": "https://webgit.keeer.net/?utm_source=www",
+      "icon": "https://webgit.keeer.net/img/gitea-sm.png",
+      "description": "TODO"
+    },
+    {
+      "name": "账号系统",
+      "link": "https://account.keeer.net/?utm_source=www",
+      "icon": "/img/logo/dark-square.jpg",
+      "description": "一切 KEEER 服务的基石。"
+    },
+    {
+      "name": "博客",
+      "link": "https://blog.keeer.net/?utm_source=www",
+      "icon": "/img/logo/dark-square.jpg",
+      "description": "TODO"
+    },
+    {
+      "name": "论坛",
+      "link": "https://forum.keeer.net/?utm_source=www",
+      "icon": "/img/logo/dark-square.jpg",
+      "description": "TODO"
+    },
+    {
+      "name": "Old homes",
+      "link": "www",
+      "icon": "/img/logo/dark-square.jpg",
+      "description": "老家（误"
+    }
+  ]
+}

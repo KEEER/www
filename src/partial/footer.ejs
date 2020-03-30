@@ -1,12 +1,41 @@
   <div class="container dark footer">
-    <div class="mdc-typography--body1">
-      <p>Copyright &copy; 2015-present KEEER. All rights reserved.</p>
-      <a target="_blank" aria-label="GitHub" class="link icon" href="https://github.com/KEEER/" rel="noopener"><%- include('/img/github-mark.svg') %></a>
-      <a target="_blank" aria-label="Email" class="link icon" href="mailto:core@keeer.net"><%- include('/img/mail.svg') %></a>
+    <div class="mdc-typography--body1 footer__container">
+      <div class="footer__left">
+        <a class="logo__footer footer__text icon" aria-label="KEEER" href="/?utm_source=footerlogo"><%- include('/img/logo/light-large.svg') %></a>
+        <p class="footer__text">
+          <a class="link text" href="/products/?utm_source=footer">产品</a> /
+          <a class="link text" href="https://account.keeer.net/?utm_source=www&utm_medium=footer">账户</a> /
+          <a class="link text" href="https://print.keeer.net/?utm_source=www&utm_medium=footer">Cloud Print</a> /
+          <a class="link text" href="/?utm_source=footer#our-team">团队</a> /
+          <a class="link text" href="https://vote-lab.keeer.net/equableyear/contact-keeer/fill?utm_source=www&utm_medium=footer">联系</a> /
+          <a class="link text" href="/?utm_source=footer#about-us">关于</a>
+        </p>
+        <div class="footer__empty"></div>
+        <p class="footer__text footer__copyright">Copyright &copy; 2015-present KEEER. All rights reserved.</p>
+      </div>
+      <div class="footer__right">
+        <a target="_blank" aria-label="GitHub" class="link footer__text" href="https://github.com/KEEER/" rel="noopener">
+          <%- include('/img/github-mark.svg') %> GitHub
+        </a>
+        <a target="_blank" aria-label="电子邮件" class="link footer__text" href="mailto:core@keeer.net">
+          <%- include('/img/mail.svg') %> 电子邮件
+        </a>
+        <a target="_blank" aria-label="博客" class="link footer__text" href="https://blog.keeer.net/?utm_source=www&utm_medium=footer" rel="noopener">
+          <%- include('/img/blog.svg') %> 博客
+        </a>
+        <a target="_blank" aria-label="微信公众号" class="link footer__text" href="/img/mpqr.png" rel="noopener">
+          <%- include('/img/wechat.svg') %> 微信公众号
+        </a>
+        <a target="_blank" aria-label="联系表单" class="link footer__text" href="https://vote-lab.keeer.net/equableyear/contact-keeer/fill">
+          <%- include('/img/contact.svg') %> 联系表单
+        </a>
+        <p class="footer__text footer__copyright">Copyright &copy; 2015-present KEEER. All rights reserved.</p>
+      </div>
     </div>
   </div>
   <script src="/js/vendor/css-var-polyfill.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@material/ripple@3.1.0/dist/mdc.ripple.min.js"></script>
+  <script src="https://idframe.keeer.net/js/appbar.js"></script>
   <script src="/js/common.js"></script>
 </body>
 </html>

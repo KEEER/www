@@ -1,0 +1,43 @@
+module.exports = {
+  'env': {
+    'browser': true,
+    'es6': true,
+    'node': true,
+  },
+  'extends': [
+    'eslint:recommended',
+  ],
+  'globals': {
+    'Atomics': 'readonly',
+    'SharedArrayBuffer': 'readonly',
+  },
+  'parserOptions': {
+    'ecmaVersion': 2018,
+    'sourceType': 'module',
+  },
+  'plugins': [],
+  'rules': {
+    'array-bracket-spacing': [ 'error', 'always' ],
+    'comma-dangle': [ 'error', 'always-multiline' ],
+    'comma-spacing': 'error',
+    'indent': [ 'error', 2 ],
+    'key-spacing': 'error',
+    'keyword-spacing': 'error',
+    'linebreak-style': [ 'error', 'unix' ],
+    'no-console': 'off',
+    'no-extra-semi': 'off',
+    'no-multi-spaces': 'error',
+    'no-trailing-spaces': 'error',
+    'no-undef': 'off',
+    'no-unused-vars': 'warn',
+    'object-curly-spacing': [ 'error', 'always' ],
+    'quotes': [ 'error', 'single' ],
+    'semi': [ 'error', 'never', { beforeStatementContinuationChars: 'always' } ],
+    'space-before-blocks': [ 'error', 'always' ],
+    'space-before-function-paren': [ 'error', 'always' ],
+    'space-in-parens': 'error',
+    'space-infix-ops': 'error',
+    'space-unary-ops': 'error',
+    'spaced-comment': [ 'error', 'always', { exceptions: [ '*' ] } ],
+  },
+}

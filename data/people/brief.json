@@ -1,37 +1,65 @@
 [
   {
-    "avatarUrl": "https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg",
+    "avatarUrl": "/img/avatar/alan.png",
     "name": "梁亚伦",
     "position": "开发者",
     "introduction": "KEEER目前贡献量最大的开发者。",
-    "url": "/people/alan"
+    "id": "alan"
   },
   {
-    "avatarUrl": "https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg",
+    "avatarUrl": "/img/avatar/indogent.jpg",
     "name": "陈驭祺",
     "position": "开发者",
-    "introduction": "orz dmy",
-    "url": "/people/indogent"
+    "introduction": "脑洞选手",
+    "id": "indogent"
   },
   {
-    "avatarUrl": "https://image.shutterstock.com/image-photo/lionfishsun-ocean-260nw-50574877.jpg",
+    "avatarUrl": "/img/avatar/queue.png",
     "name": "霍岱宣",
     "position": "开发者",
     "introduction": "KEEER骚话最多的开发者，顺便也是KEEER的创始人。",
-    "url": "/people/queue"
+    "id": "queue"
   },
   {
-    "avatarUrl": "https://image.shutterstock.com/image-photo/lionfishsun-ocean-260nw-50574877.jpg",
+    "avatarUrl": "/img/avatar/egamad.jpg",
     "name": "阎芃寰",
     "position": "开发者",
-    "introduction": "强大的C++能力",
-    "url": "/people/egamad"
+    "introduction": "强大的C++能力; FFT巨佬",
+    "id": "egamad"
   },
   {
-    "avatarUrl": "https://image.shutterstock.com/image-photo/lionfishsun-ocean-260nw-50574877.jpg",
+    "avatarUrl": "/img/avatar/tom.jpeg",
     "name": "吴雨峻",
     "position": "硬件工程师",
     "introduction": "可以把任何电子废品变成性能超强的电脑。",
-    "url": "/people/tom"
+    "id": "tom"
+  },
+  {
+    "avatarUrl": "/img/avatar/welen.jpeg",
+    "name": "吴习哲",
+    "position": "开发者",
+    "introduction": "喜爱coding的蒟蒻",
+    "id": "welen"
+  },
+  {
+    "avatarUrl": "/img/avatar/andy.png",
+    "name": "李知非",
+    "position": "开发者",
+    "introduction": "Developer. OIer.",
+    "id": "andy"
+  },
+  {
+    "avatarUrl": "/img/avatar/emma.jpg",
+    "name": "樊天怡",
+    "position": "文职工作者",
+    "introduction": "🤓 🤓",
+    "id": "emma"
+  },
+  {
+    "avatarUrl": "/img/avatar/peter.png",
+    "name": "陈雪松",
+    "position": "开发者",
+    "introduction": "提出奇怪的建议",
+    "id": "peter"
   }
 ]
