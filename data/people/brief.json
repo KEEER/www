@@ -3,7 +3,7 @@
     "avatarUrl": "/img/avatar/alan.png",
     "name": "梁亚伦",
     "position": "开发者",
-    "introduction": "KEEER目前贡献量最大的开发者。",
+    "introduction": "1/256 个前端",
     "id": "alan"
   },
   {
@@ -17,21 +17,21 @@
     "avatarUrl": "/img/avatar/queue.png",
     "name": "霍岱宣",
     "position": "开发者",
-    "introduction": "KEEER骚话最多的开发者，顺便也是KEEER的创始人。",
+    "introduction": "大杂烩",
     "id": "queue"
   },
   {
     "avatarUrl": "/img/avatar/egamad.jpg",
     "name": "阎芃寰",
     "position": "开发者",
-    "introduction": "强大的C++能力; FFT巨佬",
+    "introduction": "麻雀爱好者",
     "id": "egamad"
   },
   {
     "avatarUrl": "/img/avatar/tom.jpeg",
     "name": "吴雨峻",
     "position": "硬件工程师",
-    "introduction": "可以把任何电子废品变成性能超强的电脑。",
+    "introduction": "ICC AP 吊车尾",
     "id": "tom"
   },
   {
