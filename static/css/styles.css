@@ -5,6 +5,7 @@ body {
   flex-direction: column;
   --mdc-theme-primary: #002d4d;
   background-color: #002d4d;
+  filter: grayscale(1);
 }
 
 /* container */
