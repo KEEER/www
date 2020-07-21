@@ -1,4 +1,4 @@
-<%- include('/partial/header', { title: '产品', back: true }) %>
+<%- include('/partial/header', { title: '产品', back: '/?utm_source=products_back' }) %>
 
 <div class="container dark header products">
   <div class="background-surface-clip"><div class="background-surface"></div></div>
@@ -22,7 +22,7 @@
   <div class="mdc-typography--body1">
     <div id="games" class="anchor"></div>
     <h2 class="mdc-typography--headline4">游戏</h2>
-    <p>KEEER 团队的初心，仍在继续。</p>
+    <p>KEEER 团队的初心，仍在继续。</p>
     <%- include('/partial/product-group', { productIndex, group: 'games' }) %>
   </div>
 </div>
@@ -41,7 +41,7 @@
   <div class="mdc-typography--body1">
     <div id="labs" class="anchor"></div>
     <h2 class="mdc-typography--headline4">KEEER Labs</h2>
-    <p>一个存放未完成的 idea 的地方。在这里，你可以找到我们正在制作的项目，并抢先体验。</p>
+    <p>一个存放未完成的 idea 的地方。在这里，你可以找到我们正在制作的项目，并抢先体验。</p>
     <%- include('/partial/product-group', { productIndex, group: 'labs' }) %>
   </div>
 </div>

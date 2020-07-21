@@ -12,7 +12,7 @@
   if (header) {
     var hidden = true
     var nohide = header.classList.contains('nohide')
-    var clazz = nohide ? 'opaque' : 'hidden'
+    var clazz = nohide ? 'opaque' : 'header--hidden'
     var onscroll = throttle(200, function () {
       var rect = header.getBoundingClientRect()
       var height = window.innerHeight
@@ -36,11 +36,11 @@
     setTimeout(onscroll, 1)
     setTimeout(onscroll, 320)
     if (nohide) {
-      appbar.classList.remove('hidden')
+      appbar.classList.remove('header--hidden')
       appbar.classList.add('opaque')
     }
   } else {
-    appbar.classList.remove('hidden')
+    appbar.classList.remove('header--hidden')
   }
 
   var ripples = [].concat(Array.from($$('[data-ripple]')), Array.from($$('.mdc-button')), Array.from($$('.mdc-icon-button')))
@@ -49,5 +49,10 @@
     if (ripples[i].classList.contains('mdc-icon-button')) ripple.unbounded = true
   }
 
-  var frame = new idFrame.AppBarFrame({ container: '#idframe' })
+  var intervalId = setInterval(function () {
+    if ('idFrame' in window && idFrame && idFrame.AppBarFrame) {
+      clearInterval(intervalId)
+      new idFrame.AppBarFrame({ container: '#idframe' })
+    }
+  }, 200)
 })()

@@ -81,7 +81,7 @@
   tools: {
     gkavatar: {
       name: '高考头像生成',
-      link: 'https://keeer.net/gkavatar/?utm_source=www&utm_medium=uselink',
+      link: 'https://keeer.net/gkavatar/2020/?utm_source=www&utm_medium=uselink',
       description: 'TODO',
       icon: '/img/logo/dark-square.jpg',
       members: [
@@ -108,7 +108,7 @@
     },
     sau: {
       name: '社联管理系统',
-      link: 'https://sau-lab.keeer.net/?utm_source=www&utm_medium=uselink',
+      link: 'https://sau-lab.keeer.net:20443/?utm_source=www&utm_medium=uselink',
       description: 'TODO',
       icon: '/img/logo/light-square.jpg',
       members: [

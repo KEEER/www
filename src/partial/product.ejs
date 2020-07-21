@@ -1,5 +1,5 @@
 <% const product = productAll[group][id] %>
-<%- include('/partial/header', { title: `${product.name} - 产品`, back: true }) %>
+<%- include('/partial/header', { title: `${product.name} - 产品`, back: '/products/?utm_source=product_back' }) %>
 
 <div class="container dark header product nohide">
   <div>
@@ -10,7 +10,7 @@
       <div class="header-info__basics">
         <h1 class="mdc-typography mdc-typography--headline2 header-info__name"><%= product.name %></h1>
         <h3 class="mdc-typography mdc-typography--subtitle1 header-info__description"><%= product.description %></h3>
-        <a href="<%- product.useLink %>" class="mdc-button mdc-button--outlined">
+        <a href="<%- product.useLink %>" class="mdc-button mdc-button--outlined" role="button">
           <div class="mdc-button__ripple"></div>
           <i class="mdc-button__icon" aria-hidden="true"><%- include('/img/next.svg') %></i>
           <span class="mdc-button__label">开始使用</span>

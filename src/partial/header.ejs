@@ -23,9 +23,9 @@
 <body class="mdc-typography nojs">
   <script>document.body.classList.remove('nojs')</script>
   <% const backable = typeof back !== 'undefined' && back %>
-  <% if (backable) { %><span id="back"><button aria-label="返回" onclick="history.back()" class="mdc-icon-button icon"><%- include('/img/back.svg') %></button></span><% } %>
+  <% if (backable) { %><span id="back"><a href="<%- back %>" aria-label="返回" class="mdc-icon-button icon" role="button"><%- include('/img/back.svg') %></a></span><% } %>
   <span id="idframe"></span>
-  <header class="mdc-top-app-bar mdc-top-app-bar--fixed hidden<% if (backable) { %> backable<% } %>" id="appbar">
+  <header class="mdc-top-app-bar mdc-top-app-bar--fixed header--hidden<% if (backable) { %> backable<% } %>" id="appbar">
     <div class="mdc-top-app-bar__row">
       <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start container">
         <span class="mdc-top-app-bar__title"><a class="logo__appbar" href="/?utm_source=topappbar"><%- include('/img/logo/light-large.svg') %></a></span>
