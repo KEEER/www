@@ -147,6 +147,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .icon {
@@ -170,6 +171,7 @@ body {
 /* logo */
 .logo__appbar, .logo__appbar > svg, .logo__footer, .logo__footer > svg {
   height: 32px;
+  width: 108px;
   text-decoration: none;
   display: block;
 }
