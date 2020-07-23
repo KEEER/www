@@ -22,14 +22,18 @@
 
 <div class="container light">
   <div class="mdc-typography--body1">
-    <% for (let p of product.introduction.split('\n').map(p => p.trim()).filter(p => !!p)) { %>
-      <p><%= p %></p>
-    <% } %>
+    <% for (const p of product.introduction.split('\n').map(p => p.trim()).filter(p => !!p)) { if (!p.startsWith('__NOP__')) { %>
+      <p class="reveal"><%- p %></p>
+    <% } else { %>
+      <%- p.replace('__NOP__', '') %>
+    <% } } %>
     <div id="team" class="anchor"></div>
     <h2 class="mdc-typography mdc-typography--headline3">团队</h2>
-    <% for (let member of product.members) { %>
-      <%- include('/partial/people-card', { ...peopleBrief.find(p => p.id === member.id), works: member.works }) %><br />
-    <% } %>
+    <div class="infocard-group">
+      <% for (let member of product.members) { %>
+        <%- include('/partial/people-card', { ...peopleBrief.find(p => p.id === member.id), works: member.works }) %><br />
+      <% } %>
+    </div>
   </div>
 </div>
 

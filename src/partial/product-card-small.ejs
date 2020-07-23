@@ -4,7 +4,8 @@ const normalizedLink = /^https?:\/\//.test(link) ?
   `/products/${encodeURIComponent(group)}/${encodeURIComponent(link)}`
 %>
 
-<div class="mdc-card product reveal">
+<div class="reveal">
+<div class="mdc-card product-card product-card__small product hovercard">
   <% const hasWorks = typeof works !== 'undefined' && Array.isArray(works) %>
   <a href="<%- normalizedLink %>" class="mdc-card__primary-action" data-ripple tabindex="0">
     <div class="mdc-card__media mdc-card__media--square" style="background-image: url(&quot;<%- icon %>&quot;);"></div>
@@ -22,4 +23,5 @@ const normalizedLink = /^https?:\/\//.test(link) ?
     </div>
   </a>
   <% if (hasWorks) { %><div class="mdc-card__secondary mdc-typography mdc-typography--body2"><%= description %></div><% } %>
+</div>
 </div>

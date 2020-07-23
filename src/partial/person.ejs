@@ -22,22 +22,24 @@
     <% } %>
     <div id="products" class="anchor"></div>
     <h2 class="mdc-typography mdc-typography--headline3">项目</h2>
-    <%
-    for (let group in productAll) {
-      for (let productId in productAll[group]) {
-        const product = productAll[group][productId]
-        const info = product.members.find(m => m.id === id)
-        if (info) { %>
-          <%- include('/partial/product-card-small', {
-            group,
-            works: info.works,
-            ...peopleBrief.find(p => p.id === id),
-            ...product,
-          }) %><br>
-        <% }
+    <div class="infocard-group">
+      <%
+      for (let group in productAll) {
+        for (let productId in productAll[group]) {
+          const product = productAll[group][productId]
+          const info = product.members.find(m => m.id === id)
+          if (info) { %>
+            <%- include('/partial/product-card-small', {
+              group,
+              works: info.works,
+              ...peopleBrief.find(p => p.id === id),
+              ...product,
+            }) %><br>
+          <% }
+        }
       }
-    }
-    %>
+      %>
+    </div>
   </div>
 </div>
 <%- include('/partial/footer')%>

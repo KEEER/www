@@ -56,6 +56,27 @@ body {
   transition-delay: .2s;
 }
 
+.hovercard {
+  transition: cubic-bezier(.4,0,.2,1) .2s;
+  transition-property: box-shadow;
+}
+.hovercard:hover, .hovercard:focus, .hovercard:focus-within, .hovercard:active {
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,.2),0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12);
+}
+
+@media(min-width: 794px) {
+  .infocard-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .infocard-group > * {
+    box-sizing: border-box;
+    width: 48%;
+    margin: 16px 0;
+  }
+}
+
 .nodelay {
   -webkit-transition-delay: 0s;
   -moz-transition-delay: 0s;
@@ -273,9 +294,8 @@ body {
 
 #products-gallery > .mdc-card {
   margin: 6px 0;
+  width: 100%;
 }
-
-#products-gallery > .mdc-card.extra { display: none; }
 
 @media(min-width: 794px) {
   #products-gallery {
@@ -293,23 +313,15 @@ body {
   }
 }
 
-@media(min-width: 1056px) {
-  #products-gallery > .mdc-card { width: 336px; }
-  #products-gallery > .mdc-card.extra { display: flex; }
-}
-
 @media(max-width: 794px) {
   .mdc-typography--headline2 {
     font-size: 2.125rem;
     line-height: 2.5rem;
     margin-bottom: 0;
   }
-  #products-gallery > .mdc-card.extra { display: flex; }
 }
 
-.mdc-card__primary {
-  padding: 1rem;
-}
+.mdc-card__primary { padding: 1rem; }
 
 .mdc-card > .mdc-card__primary-action {
   display: flex;
@@ -322,20 +334,18 @@ body {
   border-radius: 0;
 }
 
-.people .mdc-card__media:first-child {
-  border-radius: 4px;
+.index-about .background-surface {
+  background-image: linear-gradient(45deg, #002d4d, #d10f1a);
 }
 
+.people .mdc-card__media:first-child { border-radius: 4px; }
 .people__primary {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.mdc-card__title, .mdc-card__subtitle {
-  margin: 0;
-}
-
+.mdc-card__title, .mdc-card__subtitle { margin: 0; }
 .mdc-card__secondary, .mdc-card__subtitle {
   color: rgba(0, 0, 0, .54);
   color: var(--mdc-theme-text-secondary-on-background, rgba(0, 0, 0, .54));
@@ -465,7 +475,7 @@ body {
   right: 0;
   z-index: -1;
 }
-.container.header.products, .container.games, .container.labs {
+.container.fixed-background {
   position: relative;
   background: transparent;
 }

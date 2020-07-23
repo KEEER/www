@@ -1,8 +1,7 @@
 ;(function () {
   var $ = function (sel) { return document.querySelector(sel) }
-  var $$ = function (sel) { return document.querySelectorAll(sel) }
   switchButton = $('#switch-person')
-  peopleList = $$('.people')
+  peopleList = $('#team-members').querySelectorAll('.reveal')
   for (var i = 0; i < peopleList.length; i++) {
     peopleList[i].classList.add('hidden')
     peopleList[i].classList.add('nodelay')
@@ -11,7 +10,10 @@
   var displayNumber = Math.floor(Math.random() * (peopleList.length))
   var displayPerson = peopleList[displayNumber]
   displayPerson.classList.remove('hidden')
+  var switching = false
   switchButton.onclick = function () {
+    if (switching) return
+    switching = true
     var oldPerson = displayPerson
     oldPerson.removeAttribute('data-show')
     oldPerson.classList.add('ghost')
@@ -26,6 +28,7 @@
     setTimeout(function () {
       oldPerson.classList.remove('ghost')
       oldPerson.classList.add('hidden')
+      switching = false
     }, 250)
   }
 })()

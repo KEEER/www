@@ -1,4 +1,5 @@
-<div class="mdc-card people reveal">
+<div class="reveal">
+<div class="mdc-card people-card people hovercard">
   <% const hasWorks = typeof works !== 'undefined' && Array.isArray(works) %>
   <a href="/people/<%- encodeURIComponent(id) %>?utm_source=card<%- hasWorks ? '#products' : '' %>" class="mdc-card__primary-action" data-ripple tabindex="0">
     <div class="mdc-card__media mdc-card__media--square" style="background-image: url(&quot;<%- avatarUrl %>&quot;);"></div>
@@ -16,4 +17,5 @@
     </div>
   </a>
   <% if (!hasWorks) { %><div class="mdc-card__secondary mdc-typography mdc-typography--body2"><%= introduction %></div><% } %>
+</div>
 </div>
