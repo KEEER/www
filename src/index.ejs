@@ -1,4 +1,4 @@
-<%- include('/partial/header', { index: true }) %>
+<%- include('/partial/header', { index: true, preloads: [ [ '/js/switch.js', 'script' ], [ '/img/rain.jpg', 'image' ], ...productBrief.map(({ heroUrl }) => [ heroUrl, 'image' ]) ] }) %>
 
 <div class="container dark header index align-center nohide">
   <div class="mdc-typography--body1">

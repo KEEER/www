@@ -43,16 +43,27 @@
     appbar.classList.remove('header--hidden')
   }
 
-  var ripples = [].concat(Array.from($$('[data-ripple]')), Array.from($$('.mdc-button')), Array.from($$('.mdc-icon-button')))
-  for (var i = 0; i < ripples.length; i++) {
-    var ripple = mdc.ripple.MDCRipple.attachTo(ripples[i])
-    if (ripples[i].classList.contains('mdc-icon-button')) ripple.unbounded = true
-  }
-
   var intervalId = setInterval(function () {
     if ('idFrame' in window && idFrame && idFrame.AppBarFrame) {
       clearInterval(intervalId)
       new idFrame.AppBarFrame({ container: '#idframe' })
     }
   }, 200)
+
+  var rippleIntervalId = setInterval(function () {
+    if ('mdc' in window && 'ripple' in window.mdc) {
+      clearInterval(rippleIntervalId)
+      var ripples = [].concat(Array.from($$('[data-ripple]')), Array.from($$('.mdc-button')), Array.from($$('.mdc-icon-button')))
+      for (var i = 0; i < ripples.length; i++) {
+        var ripple = mdc.ripple.MDCRipple.attachTo(ripples[i])
+        if (ripples[i].classList.contains('mdc-icon-button')) ripple.unbounded = true
+      }
+    }
+  })
+
+  window.GoogleAnalyticsObject = 'ga'
+  window.ga = window.ga || function () { ;(window.ga.q = window.ga.q || []).push(arguments) }
+  window.ga.l = Date.now()
+  ga('create', 'UA-135036985-1', 'auto')
+  ga('send', 'pageview')
 })()
