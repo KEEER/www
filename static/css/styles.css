@@ -23,18 +23,8 @@ body {
 }
 .reveal, .container > * {
   opacity: 0;
-  -webkit-transform: scale(.8);
-  -moz-transform: scale(.8);
-  -ms-transform: scale(.8);
-  -o-transform: scale(.8);
   transform: scale(.8);
-  -webkit-transition: .25s cubic-bezier(0.4, 0, 0.2, 1);
-  -moz-transition: .25s cubic-bezier(0.4, 0, 0.2, 1);
-  -o-transition: .25s cubic-bezier(0.4, 0, 0.2, 1);
   transition: .25s cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-transition-property: transform, opacity;
-  -moz-transition-property: transform, opacity;
-  -o-transition-property: transform, opacity;
   transition-property: transform, opacity;
 }
 .container.footer > * { transition: none; }
@@ -45,14 +35,7 @@ body {
 .container > .background-surface-clip
 {
   opacity: 1;
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  -o-transform: none;
   transform: none;
-  -webkit-transition-delay: .2s;
-  -moz-transition-delay: .2s;
-  -o-transition-delay: .2s;
   transition-delay: .2s;
 }
 
@@ -77,12 +60,7 @@ body {
   }
 }
 
-.nodelay {
-  -webkit-transition-delay: 0s;
-  -moz-transition-delay: 0s;
-  -o-transition-delay: 0s;
-  transition-delay: 0s;
-}
+.nodelay { transition-delay: 0s; }
 
 .container::before, .container::after {
   content: ' ';

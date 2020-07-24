@@ -2,6 +2,9 @@ const ejs = require('ejs')
 const fs = require('fs')
 const path = require('path')
 const { mkdirpSync, copySync } = require('fs-extra')
+const postcss = require('postcss')
+const autoprefixer = require('autoprefixer')
+const cssnano = require('cssnano')
 
 const base = path.resolve(__dirname, '../src')
 const dirlist = [ base ]
@@ -54,3 +57,8 @@ async function render (filename, extraOptions = {}, toFileId = filename) {
 mkdirpSync(path.resolve(__dirname, '../dist'))
 copySync(path.resolve(__dirname, '../static'), path.resolve(__dirname, '../dist/'))
 for (const dir of data.v3) copySync(path.resolve(__dirname, '../www-v3/', dir), path.resolve(__dirname, '../dist/', dir))
+
+const cssPath = path.resolve(__dirname, '../static/css/styles.css')
+postcss([ autoprefixer(), cssnano({ preset: 'default' }) ])
+  .process(fs.readFileSync(cssPath), { from: cssPath })
+  .then(res => fs.writeFileSync(path.resolve(__dirname, '../dist/css/styles.css'), res.css))
