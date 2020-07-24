@@ -1,4 +1,9 @@
 ;(function () {
+  var arrayFrom = function (arrayLike) {
+    var array = []
+    for (let i = 0; i < arrayLike.length; i++) array[i] = arrayLike[i]
+    return array
+  }
   var $ = function (sel) { return document.querySelector(sel) }
   var $$ = function (sel) { return document.querySelectorAll(sel) }
   var throttle = function (ms, func) {
@@ -7,7 +12,7 @@
   }
   var appbar = $('#appbar')
   var header = $('.container.header')
-  var revealEls = [].concat(Array.from($$('.container'))).concat(Array.from($$('.reveal')))
+  var revealEls = [].concat(arrayFrom($$('.container'))).concat(arrayFrom($$('.reveal')))
   var revealed = []
   if (header) {
     var hidden = true
