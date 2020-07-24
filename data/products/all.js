@@ -8,10 +8,10 @@
       icon: '/img/logo/cloud-print.png',
       useLink: 'https://print.keeer.net/?utm_source=www&utm_medium=uselink',
       introduction: `
-      <strong>注：疫情期间 Cloud Print 服务暂停。</strong>
-      历经半年，Cloud Print 终于上线了。
-      新版的 Cloud Print 由 KEEER 团队开发，RDFZ ICC 科技部运营，在连接 ICC Classroom WiFi 之后即可打印。于电脑端使用体验最佳。
-      注意：使用时请勿触碰打印机、联供墨盒、服务器、显示屏、路由器等设备。请在打印时注意整理纸张。如遇卡纸故障请按打印机取消键，其他故障请联系 S2C6 霍岱宣或 S2C8 吴雨峻。本打印机采用联供墨盒，因此打印机可能会显示缺墨状态，请忽略。本打印机不适用于打印高质量海报，望周知。
+      <strong>注：疫情期间 Cloud Print 服务暂停。</strong>
+      历经半年，Cloud Print 终于上线了。
+      新版的 Cloud Print 由 KEEER 团队开发，RDFZ ICC 科技部运营，在连接 ICC Classroom WiFi 之后即可打印。于电脑端使用体验最佳。
+      注意：使用时请勿触碰打印机、联供墨盒、服务器、显示屏、路由器等设备。请在打印时注意整理纸张。如遇卡纸故障请按打印机取消键，其他故障请联系 S2C6 霍岱宣或 S2C8 吴雨峻。本打印机采用联供墨盒，因此打印机可能会显示缺墨状态，请忽略。本打印机不适用于打印高质量海报，望周知。
       `,
       members: [
         { id: 'queue', works: [ 'design', 'develop' ] },
@@ -100,16 +100,16 @@
       icon: '/img/logo/vote.svg',
       useLink: 'https://vote-lab.keeer.net/?utm_source=www&utm_medium=uselink',
       introduction: `
-      KEEER Vote 是一个正在开发中的多功能的数据收集平台。
-      我们希望 Vote 是：
+      KEEER Vote 是一个正在开发中的多功能的数据收集平台。
+      我们希望 Vote 是：
       __NOP__<ul>
-        __NOP__<li class="reveal"><strong>美观的</strong>： 有比现有问卷工具更美观的默认 UI（用户界面）；</li>
-        __NOP__<li class="reveal"><strong>可自定义的</strong>： 用户可以自定义更多表单主题里的参数（比如 UI 元素颜色等），也可以自己编写主题；</li>
+        __NOP__<li class="reveal"><strong>美观的</strong>： 有比现有问卷工具更美观的默认 UI（用户界面）；</li>
+        __NOP__<li class="reveal"><strong>可自定义的</strong>： 用户可以自定义更多表单主题里的参数（比如 UI 元素颜色等），也可以自己编写主题；</li>
         __NOP__<li class="reveal"><strong>可扩展的</strong>： 通过插件系统可以很容易地扩展现有功能，也可以自己编写脚本控制表单；</li>
         __NOP__<li class="reveal"><strong>用户友好的</strong>： 具有断点续填、自动填充等一系列改善用户体验的功能；</li>
         __NOP__<li class="reveal"><strong>开放的</strong>：使源代码和平台都有很高的开放性。</li>
       __NOP__</ul>
-      <a href="https://k3r.run/v/3p">点击此处申请加入 Vote 内测。</a>
+      <a href="https://k3r.run/v/3p">点击此处申请加入 Vote 内测。</a>
       `,
       members: [
         { id: 'alan', works: [ 'design', 'develop' ] },

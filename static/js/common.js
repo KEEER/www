@@ -7,12 +7,19 @@
   var $ = function (sel) { return document.querySelector(sel) }
   var $$ = function (sel) { return document.querySelectorAll(sel) }
   var throttle = function (ms, func) {
-    var lastFire = -1
+    var lastCallTime = -1
+    var timeoutId = -1
     return function () {
-      if (Date.now() - lastFire > ms) {
-        lastFire = Date.now()
+      var time = Date.now()
+      if (lastCallTime < time - ms) {
+        lastCallTime = time
+        if (timeoutId > -1) clearTimeout(timeoutId)
+        timeoutId = -1
         func()
+        return
       }
+      if (timeoutId > -1) return
+      setTimeout(func, timeoutId)
     }
   }
   var appbar = $('#appbar')
@@ -23,7 +30,7 @@
     var hidden = true
     var nohide = header.classList.contains('nohide')
     var clazz = nohide ? 'opaque' : 'header--hidden'
-    var onscroll = throttle(200, function () {
+    var onscroll = throttle(100, function () {
       var rect = header.getBoundingClientRect()
       var height = window.innerHeight
       if (hidden && rect.top + rect.height - 64 < 0) {
