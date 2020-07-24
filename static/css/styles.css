@@ -7,7 +7,7 @@ body {
   background-color: #002d4d;
 }
 
-.hidden { display: none; }
+.hidden { display: none !important; }
 .nojs .requirejs { display: none; }
 
 /* container */
