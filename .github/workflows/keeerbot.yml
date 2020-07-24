@@ -1,0 +1,14 @@
+name: Sync to KEEERBot
+on: [ push ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Sync repo
+      run: |
+        mkdir ~/.ssh
+        echo "${{ secrets.KEEERBOT_SSH_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        git fetch --unshallow
+        git push --all --force --prune git@github.com:KEEERBot/www.git
