@@ -1,14 +1,19 @@
 ;(function () {
   var arrayFrom = function (arrayLike) {
     var array = []
-    for (let i = 0; i < arrayLike.length; i++) array[i] = arrayLike[i]
+    for (var i = 0; i < arrayLike.length; i++) array[i] = arrayLike[i]
     return array
   }
   var $ = function (sel) { return document.querySelector(sel) }
   var $$ = function (sel) { return document.querySelectorAll(sel) }
   var throttle = function (ms, func) {
     var lastFire = -1
-    return function () { if (Date.now() - lastFire > ms) func() }
+    return function () {
+      if (Date.now() - lastFire > ms) {
+        lastFire = Date.now()
+        func()
+      }
+    }
   }
   var appbar = $('#appbar')
   var header = $('.container.header')
@@ -33,7 +38,7 @@
         if (revealed[i]) continue
         if (revealEls[i].getBoundingClientRect().top < height) {
           revealed[i] = true
-          revealEls[i].setAttribute('data-show', '')
+          revealEls[i].classList.add('reveal--show')
         }
       }
     })
@@ -64,7 +69,7 @@
   var rippleIntervalId = setInterval(function () {
     if ('mdc' in window && 'ripple' in window.mdc) {
       clearInterval(rippleIntervalId)
-      var ripples = [].concat(Array.from($$('[data-ripple]')), Array.from($$('.mdc-button')), Array.from($$('.mdc-icon-button')))
+      var ripples = [].concat(arrayFrom($$('[data-ripple]')), arrayFrom($$('.mdc-button')), arrayFrom($$('.mdc-icon-button')))
       for (var i = 0; i < ripples.length; i++) {
         var ripple = mdc.ripple.MDCRipple.attachTo(ripples[i])
         if (ripples[i].classList.contains('mdc-icon-button')) ripple.unbounded = true

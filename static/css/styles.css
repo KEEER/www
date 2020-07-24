@@ -28,11 +28,11 @@ body {
   transition-property: transform, opacity;
 }
 .container.footer > * { transition: none; }
-.nojs .container > *, .container[data-show] > *,
-.nojs .reveal, .reveal[data-show],
+.nojs .container > *, .container.reveal--show > *,
+.nojs .reveal, .reveal.reveal--show,
 .container.footer > *,
 .container.mdc-top-app-bar__section > *, /* top app bar */
-.container > .background-surface-clip
+.container > .background-surface
 {
   opacity: 1;
   transform: none;
@@ -431,34 +431,28 @@ body {
 .products .headline { margin-bottom: 48px; }
 .container.header.product > *, .container.header.products > * { justify-content: flex-end; }
 
-.background-surface-clip {
-  position: absolute;
-  clip: rect(auto, auto, auto, auto);
-  width: 100%;
-  height: 100%;
-  max-width: 256%;
-  left: 0;
-  top: 0;
-}
-.background-surface-clip ~ * { z-index: 1; }
+.background-surface ~ * { z-index: 1; }
 .container.header.products .background-surface,
 .container.games .background-surface,
-.container.labs .background-surface { background: #002d4d; }
-.container.header.products .background-surface { background: linear-gradient(64deg, #9a1b99, #002d4d); }
-.container.games .background-surface { background: linear-gradient(64deg, #d32f2f, #961b97); }
-.container.labs .background-surface { background: linear-gradient(64deg, #f47b00, #d32f2f); }
+.container.labs .background-surface { background-color: #002d4d; }
+.container.header.products .background-surface { background-image: linear-gradient(64deg, #9a1b99, #002d4d); }
+.container.games .background-surface { background-image: linear-gradient(64deg, #d32f2f, #961b97); }
+.container.labs .background-surface { background-image: linear-gradient(64deg, #f47b00, #d32f2f); }
 .background-surface {
-  position: fixed;
+  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  min-width: 100vw;
   z-index: -1;
+  background-size: 100vw auto;
   background-attachment: fixed;
 }
 .container.fixed-background {
   position: relative;
   background: transparent;
+  overflow: hidden;
 }
 
 .products__product-icon, .mdc-list--avatar-list .products__product-icon.mdc-list-item__graphic,
