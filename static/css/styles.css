@@ -301,6 +301,7 @@ body {
   }
 }
 
+#switch-person { margin: -16px 0 16px; }
 .mdc-card__primary { padding: 1rem; }
 
 .mdc-card > .mdc-card__primary-action {
@@ -311,6 +312,8 @@ body {
 .product .mdc-card__media.mdc-card__media--square {
   margin: 16px;
   width: 78px;
+  min-width: 78px;
+  height: 78px;
   border-radius: 0;
 }
 
