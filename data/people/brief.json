@@ -28,14 +28,14 @@
     "id": "egamad"
   },
   {
-    "avatarUrl": "/img/avatar/tom.jpeg",
+    "avatarUrl": "/img/avatar/tom.jpg",
     "name": "吴雨峻",
     "position": "硬件工程师",
     "introduction": "ICC AP 吊车尾",
     "id": "tom"
   },
   {
-    "avatarUrl": "/img/avatar/welen.jpeg",
+    "avatarUrl": "/img/avatar/welen.jpg",
     "name": "吴习哲",
     "position": "开发者",
     "introduction": "喜爱 coding 的蒟蒻",
@@ -56,7 +56,7 @@
     "id": "emma"
   },
   {
-    "avatarUrl": "/img/avatar/peter.png",
+    "avatarUrl": "/img/avatar/peter.jpg",
     "name": "陈雪松",
     "position": "开发者",
     "introduction": "提出奇怪的建议",

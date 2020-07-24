@@ -1,4 +1,4 @@
-<%- include('/partial/header', { title: `${name} - 成员`, back: '/?utm_source=person_back' }) %>
+<%- include('/partial/header', { title: `${name} - 成员`, back: '/?utm_source=person_back', preloads: [ [ avatar, 'image' ], [ headerImageUrl, 'image' ] ] }) %>
 <div class="container dark header person nohide" style="background-image: url(&quot;<%- headerImageUrl %>&quot;);">
   <div>
     <div class="header-info">
@@ -7,7 +7,7 @@
       </div>
       <div class="header-info__basics">
         <h1 class="mdc-typography mdc-typography--headline2 header-info__name"><%= name %></h1>
-        <h3 class="mdc-typography mdc-typography--subtitle2 header-info__description"><%= speciality %></h3>
+        <h2 class="mdc-typography mdc-typography--subtitle2 header-info__description"><%= speciality %></h2>
         <p class="mdc-typography mdc-typography--body2 person-motto"><%= motto %></p>
       </div>
     </div>
