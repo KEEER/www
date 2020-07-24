@@ -31,7 +31,7 @@
   setTimeout(function () {
     var el = document.createElement('div')
     el.innerHTML = document.getElementById('styles').innerHTML
-    document.head.appendChild(el)
+    document.head.insertBefore(el, document.head.firstChild)
   }, 1)
   </script>
 </head>
