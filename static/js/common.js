@@ -33,11 +33,12 @@
     var onscroll = throttle(100, function () {
       var rect = header.getBoundingClientRect()
       var height = window.innerHeight
-      if (hidden && rect.top + rect.height - 64 < 0) {
+      var y = window.scrollY || window.pageYOffset
+      if (nohide ? y > 32 : (hidden && rect.top + rect.height - 64 < 0)) {
         appbar.classList.remove(clazz)
         hidden = false
       }
-      if (!hidden && rect.top + rect.height - 64 > 0) {
+      if (nohide ? y < 32 : (!hidden && rect.top + rect.height - 64 > 0)) {
         appbar.classList.add(clazz)
         hidden = true
       }
