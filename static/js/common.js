@@ -60,12 +60,7 @@
     appbar.classList.remove('header--hidden')
   }
 
-  setTimeout(function () {
-    var el = document.createElement('script')
-    el.src = 'https://idframe.keeer.net/js/appbar.js'
-    el.async = el.defer = true
-    document.head.appendChild(el)
-  }, 50)
+  window.idFrame = { mdc: { style: true } }
   var intervalId = setInterval(function () {
     if ('idFrame' in window && idFrame && idFrame.AppBarFrame) {
       clearInterval(intervalId)
