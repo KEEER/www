@@ -1,3 +1,11 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/autolezhiyun/", "destination": "https://services.keeer.net/autolezhiyun/" },
+    { "source": "/autolunyu/", "destination": "https://services.keeer.net/autolunyu/" },
+    { "source": "/gkavatar/", "destination": "https://services.keeer.net/gkavatar/2019/" },
+    { "source": "/gkavatar/2020/", "destination": "https://services.keeer.net/gkavatar/2020/" },
+    { "source": "/buildhome/", "destination": "https://services.keeer.net/buildhome/" },
+    { "source": "/buildhome/play/", "destination": "https://services.keeer.net/buildhome/play/" }
+  ]
 }

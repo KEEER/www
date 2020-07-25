@@ -83,7 +83,7 @@
   tools: {
     gkavatar: {
       name: '高考头像生成',
-      link: 'https://keeer.net/gkavatar/2020/?utm_source=www&utm_medium=uselink',
+      link: 'https://services.keeer.net/gkavatar/2020/?utm_source=www&utm_medium=uselink',
       description: '人大附中，高考加油！',
       icon: '/img/logo/dark-square.jpg',
       members: [
