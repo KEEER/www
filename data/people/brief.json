@@ -1,65 +1,71 @@
-[
-  {
-    "avatarUrl": "/img/avatar/alan.png",
-    "name": "梁亚伦",
-    "position": "开发者",
-    "introduction": "1/256 个前端",
-    "id": "alan"
-  },
-  {
-    "avatarUrl": "/img/avatar/indogent.jpg",
-    "name": "陈驭祺",
-    "position": "开发者",
-    "introduction": "脑洞选手",
-    "id": "indogent"
-  },
-  {
-    "avatarUrl": "/img/avatar/queue.png",
-    "name": "霍岱宣",
-    "position": "开发者",
-    "introduction": "大杂烩",
-    "id": "queue"
-  },
-  {
-    "avatarUrl": "/img/avatar/egamad.jpg",
-    "name": "阎芃寰",
-    "position": "开发者",
-    "introduction": "麻雀爱好者",
-    "id": "egamad"
-  },
-  {
-    "avatarUrl": "/img/avatar/tom.jpg",
-    "name": "吴雨峻",
-    "position": "硬件工程师",
-    "introduction": "ICC AP 吊车尾",
-    "id": "tom"
-  },
-  {
-    "avatarUrl": "/img/avatar/welen.jpg",
-    "name": "吴习哲",
-    "position": "开发者",
-    "introduction": "喜爱 coding 的蒟蒻",
-    "id": "welen"
-  },
-  {
-    "avatarUrl": "/img/avatar/andy.png",
-    "name": "李知非",
-    "position": "开发者",
-    "introduction": "Developer. OIer.",
-    "id": "andy"
-  },
-  {
-    "avatarUrl": "/img/avatar/emma.jpg",
-    "name": "樊天怡",
-    "position": "文职工作者",
-    "introduction": "🤓 🤓",
-    "id": "emma"
-  },
-  {
-    "avatarUrl": "/img/avatar/peter.jpg",
-    "name": "陈雪松",
-    "position": "开发者",
-    "introduction": "提出奇怪的建议",
-    "id": "peter"
-  }
+[{
+        "avatarUrl": "/img/avatar/alan.png",
+        "name": "梁亚伦",
+        "position": "开发者",
+        "introduction": "1/256 个前端",
+        "id": "alan"
+    },
+    {
+        "avatarUrl": "/img/avatar/indogent.jpg",
+        "name": "陈驭祺",
+        "position": "开发者",
+        "introduction": "脑洞选手",
+        "id": "indogent"
+    },
+    {
+        "avatarUrl": "/img/avatar/queue.png",
+        "name": "霍岱宣",
+        "position": "开发者",
+        "introduction": "大杂烩",
+        "id": "queue"
+    },
+    {
+        "avatarUrl": "/img/avatar/egamad.jpg",
+        "name": "阎芃寰",
+        "position": "开发者",
+        "introduction": "麻雀爱好者",
+        "id": "egamad"
+    },
+    {
+        "avatarUrl": "/img/avatar/tom.jpg",
+        "name": "吴雨峻",
+        "position": "硬件工程师",
+        "introduction": "ICC AP 吊车尾",
+        "id": "tom"
+    },
+    {
+        "avatarUrl": "/img/avatar/welen.jpg",
+        "name": "吴习哲",
+        "position": "开发者",
+        "introduction": "喜爱 coding 的蒟蒻",
+        "id": "welen"
+    },
+    {
+        "avatarUrl": "/img/avatar/andy.png",
+        "name": "李知非",
+        "position": "开发者",
+        "introduction": "Developer. OIer.",
+        "id": "andy"
+    },
+    {
+        "avatarUrl": "/img/avatar/emma.jpg",
+        "name": "樊天怡",
+        "position": "文职工作者",
+        "introduction": "🤓 🤓",
+        "id": "emma"
+    },
+    {
+        "avatarUrl": "/img/avatar/peter.jpg",
+        "name": "陈雪松",
+        "position": "开发者",
+        "introduction": "提出奇怪的建议",
+        "id": "peter"
+    },
+    {
+        "avatarUrl": "/img/avatar/daniel.png",
+        "name": "孙皓兮",
+        "position": "开发者",
+        "introduction": "ERROR: KiteJencien_Not_Found",
+        "id": "daniel"
+    }
 ]
