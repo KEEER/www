@@ -1,5 +1,5 @@
 <% const product = productAll[group][id] %>
-<%- include('/partial/header', { title: `${product.name} - 产品`, back: '/products/?utm_source=product_back', preloads: [ [ product.icon, 'image' ] ] }) %>
+<%- include('/partial/header', { title: `${product.name} - 产品`, headline: product.name, back: '/products/?utm_source=product_back', preloads: [ [ product.icon, 'image' ] ] }) %>
 
 <div class="container dark header product nohide">
   <div>

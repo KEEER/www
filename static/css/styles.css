@@ -147,11 +147,32 @@ body {
 }
 
 /* logo */
-.logo__appbar, .logo__appbar > svg, .logo__footer, .logo__footer > svg {
+.logo--appbar, .logo--appbar > svg, .logo__footer, .logo__footer > svg {
   height: 32px;
   width: 108px;
   text-decoration: none;
   display: block;
+}
+
+.appbar__link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.mdc-top-app-bar__title { height: 32px; }
+.appbar--with-headline .appbar__logo,
+.appbar--with-headline .appbar__title {
+  display: block;
+  transform: translateY(-32px);
+  will-change: transform;
+  transition: transform cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
+}
+
+.appbar--with-headline.header--hidden .appbar__logo,
+.appbar--with-headline.opaque .appbar__logo,
+.appbar--with-headline.header--hidden .appbar__title,
+.appbar--with-headline.opaque .appbar__title {
+  transform: none;
 }
 
 /* GitHub mark */
@@ -241,7 +262,7 @@ body {
 }
 
 @media(max-width: 1130px) {
-  #appbar.backable .logo__appbar {
+  #appbar.backable .mdc-top-app-bar__title > * {
     margin-left: 24px;
   }
 }
