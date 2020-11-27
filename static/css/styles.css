@@ -23,7 +23,7 @@ body {
 }
 .reveal, .container > * {
   opacity: 0;
-  transform: scale(.8);
+  transform: scale(.8) translateY(40px);
   transition: .25s cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: transform, opacity;
 }
@@ -159,7 +159,7 @@ body {
   text-decoration: none;
 }
 
-.mdc-top-app-bar__title { height: 32px; }
+.mdc-top-app-bar__title { height: 32px; padding-left:0; }
 .appbar--with-headline .appbar__logo,
 .appbar--with-headline .appbar__title {
   display: block;
@@ -263,7 +263,7 @@ body {
 
 @media(max-width: 1130px) {
   #appbar.backable .mdc-top-app-bar__title > * {
-    margin-left: 24px;
+    margin-left: 40px;
   }
 }
 
