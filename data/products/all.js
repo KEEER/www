@@ -129,7 +129,7 @@
   },
   meta: {
     kas: {
-      name: '账号系统',
+      name: '帐户系统',
       link: 'https://account.keeer.net/?utm_source=www&utm_medium=uselink',
       description: '一切 KEEER 服务的基石。',
       icon: '/img/logo/dark-square.jpg',
