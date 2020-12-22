@@ -85,9 +85,4 @@
   window.ga.l = Date.now()
   ga('create', 'UA-135036985-1', 'auto')
   ga('send', 'pageview')
-
-  window.$letsisrg = {
-    messageLink: 'https://blog.keeer.net/2020/11/transition-to-isrg-root-x1/',
-    callback: function (p) { ga('send', 'event', JSON.stringify(p)) },
-  }
 })()
