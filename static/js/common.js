@@ -67,7 +67,7 @@
       clearInterval(intervalId)
       new idFrame.AppBarFrame({ container: '#idframe' })
     }
-  }, 200)
+  }, 100)
 
   var rippleIntervalId = setInterval(function () {
     if ('mdc' in window && 'ripple' in window.mdc) {
