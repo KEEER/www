@@ -8,7 +8,7 @@
       icon: '/img/logo/cloud-print.png',
       useLink: 'https://print.keeer.net/?utm_source=www&utm_medium=uselink',
       introduction: `
-      <!--strong>注：疫情期间 Cloud Print 服务暂停。</strong-->
+      <strong>注：假期期间 Cloud Print 服务暂停。</strong>
       历经半年，Cloud Print 终于上线了。
       新版的 Cloud Print 由 KEEER 团队开发，RDFZ ICC 科技部运营，在连接 ICC Classroom WiFi 之后即可打印。于电脑端使用体验最佳。
       注意：使用时请勿触碰打印机、联供墨盒、服务器、显示屏、路由器等设备。请在打印时注意整理纸张。如遇卡纸故障请按打印机取消键，其他故障请联系 S2C6 霍岱宣或 S2C8 吴雨峻。本打印机采用联供墨盒，因此打印机可能会显示缺墨状态，请忽略。本打印机不适用于打印高质量海报，望周知。
