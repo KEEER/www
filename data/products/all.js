@@ -83,9 +83,9 @@
   tools: {
     gkavatar: {
       name: '高考头像生成',
-      link: 'https://services.keeer.net/gkavatar/2021/?utm_source=www&utm_medium=uselink',
+      link: 'https://services.keeer.net/gkavatar/2022/?utm_source=www-uselink',
       description: '人大附中，高考加油！',
-      icon: '/img/logo/dark-square.jpg',
+      icon: '/img/logo/gkavatar.jpg',
       members: [
         { id: 'alan', works: [ 'design', 'develop' ] },
       ],

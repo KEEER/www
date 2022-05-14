@@ -11,6 +11,8 @@
     { "source": "/gkavatar/2020/", "destination": "https://services.keeer.net/gkavatar/2020/" },
     { "source": "/gkavatar/2021", "destination": "https://services.keeer.net/gkavatar/2021/" },
     { "source": "/gkavatar/2021/", "destination": "https://services.keeer.net/gkavatar/2021/" },
+    { "source": "/gkavatar/2022", "destination": "https://services.keeer.net/gkavatar/2022/" },
+    { "source": "/gkavatar/2022/", "destination": "https://services.keeer.net/gkavatar/2022/" },
     { "source": "/buildhome", "destination": "https://services.keeer.net/buildhome/" },
     { "source": "/buildhome/", "destination": "https://services.keeer.net/buildhome/" },
     { "source": "/buildhome/play", "destination": "https://services.keeer.net/buildhome/play/" },
