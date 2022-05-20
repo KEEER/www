@@ -12,6 +12,7 @@ const data = {
   peopleBrief: require('../data/people/brief.json'),
   productBrief: require('../data/products/brief.json'),
   productIndex: require('../data/products/index.json'),
+  cdn: require('../data/cdn.json'),
   productAll: eval(fs.readFileSync('./data/products/all.js').toString()),
 }
 const filelist = []

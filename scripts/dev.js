@@ -12,6 +12,7 @@ const data = () => ({
   peopleBrief: dataFile('people/brief'),
   productBrief: dataFile('products/brief'),
   productIndex: dataFile('products/index'),
+  cdn: dataFile('cdn'),
   productAll: productAll(),
 })
 const ejsOptions = { root: path.resolve(__dirname, '../src/') }
