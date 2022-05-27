@@ -287,6 +287,10 @@ body {
   background-size: cover;
 }
 
+.container .dissolved {
+  text-align: center;
+}
+
 #products-gallery {
   display: flex;
   justify-content: space-around;
